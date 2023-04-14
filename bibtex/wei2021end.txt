@@ -1,0 +1,6 @@
+@article{wei2021end,
+  title={End-to-End Adaptive Monte Carlo Denoising and Super-Resolution},
+  author={Wei, Xinyue and Huang, Haozhi and Shi, Yujin and Yuan, Hongliang and Shen, Li and Wang, Jue},
+  journal={arXiv preprint arXiv:2108.06915},
+  year={2021}
+}

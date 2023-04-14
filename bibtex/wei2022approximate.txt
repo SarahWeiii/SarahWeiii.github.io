@@ -1,0 +1,10 @@
+@article{wei2022approximate,
+  title={Approximate convex decomposition for 3d meshes with collision-aware concavity and tree search},
+  author={Wei, Xinyue and Liu, Minghua and Ling, Zhan and Su, Hao},
+  journal={ACM Transactions on Graphics (TOG)},
+  volume={41},
+  number={4},
+  pages={1--18},
+  year={2022},
+  publisher={ACM New York, NY, USA}
+}

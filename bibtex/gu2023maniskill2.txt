@@ -1,0 +1,5 @@
+@InProceedings{gu2023maniskill2,
+author = {Gu, Jiayuan and Xiang, Fanbo and Li, Xuanlin and Ling, Zhan and Liu, Xiqiang and Mu, Tongzhou and Tang, Yihe and Tao, Stone and Wei, Xinyue and Yao, Yunchao and Yuan, Xiaodi and Xie, Pengwei and Huang, Zhiao and Chen, Rui and Su, Hao},
+title = {{M}ani{S}kill2: {A} {U}nified {B}enchmark for {G}eneralizable {M}anipulation {S}kills},
+booktitle = {International Conference on Learning Representations (ICLR)},
+year = {2023}}

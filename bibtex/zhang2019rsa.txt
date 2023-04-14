@@ -1,0 +1,6 @@
+@article{zhang2019rsa,
+  title={Rsa: Randomized simulation as augmentation for robust human action recognition},
+  author={Zhang, Yi and Wei, Xinyue and Qiu, Weichao and Xiao, Zihao and Hager, Gregory D and Yuille, Alan},
+  journal={arXiv preprint arXiv:1912.01180},
+  year={2019}
+}
