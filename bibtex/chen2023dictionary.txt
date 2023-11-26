@@ -1,0 +1,10 @@
+@article{chen2023dictionary,
+  title={Dictionary fields: Learning a neural basis decomposition},
+  author={Chen, Anpei and Xu, Zexiang and Wei, Xinyue and Tang, Siyu and Su, Hao and Geiger, Andreas},
+  journal={ACM Transactions on Graphics (TOG)},
+  volume={42},
+  number={4},
+  pages={1--12},
+  year={2023},
+  publisher={ACM New York, NY, USA}
+}

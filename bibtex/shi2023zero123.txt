@@ -1,0 +1,6 @@
+@article{shi2023zero123++,
+  title={Zero123++: a single image to consistent multi-view diffusion base model},
+  author={Shi, Ruoxi and Chen, Hansheng and Zhang, Zhuoyang and Liu, Minghua and Xu, Chao and Wei, Xinyue and Chen, Linghao and Zeng, Chong and Su, Hao},
+  journal={arXiv preprint arXiv:2310.15110},
+  year={2023}
+}

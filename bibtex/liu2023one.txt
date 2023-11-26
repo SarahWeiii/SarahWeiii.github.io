@@ -1,0 +1,6 @@
+@article{liu2023one,
+  title={One-2-3-45++: Fast Single Image to 3D Objects with Consistent Multi-View Generation and 3D Diffusion},
+  author={Liu, Minghua and Shi, Ruoxi and Chen, Linghao and Zhang, Zhuoyang and Xu, Chao and Wei, Xinyue and Chen, Hansheng and Zeng, Chong and Gu, Jiayuan and Su, Hao},
+  journal={arXiv preprint arXiv:2311.07885},
+  year={2023}
+}
