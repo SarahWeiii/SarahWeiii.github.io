@@ -1,0 +1,6 @@
+@article{shi2023zerorf,
+  title={ZeroRF: Fast Sparse View 360 $\{$$\backslash$deg$\}$ Reconstruction with Zero Pretraining},
+  author={Shi, Ruoxi and Wei, Xinyue and Wang, Cheng and Su, Hao},
+  journal={arXiv preprint arXiv:2312.09249},
+  year={2023}
+}
