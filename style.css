@@ -52,3 +52,23 @@ p {line-height: 1.5em;}
     .publication .row-text {display: block; width: 100%; margin-left: 0;}
     .press {display: block;}
 }
+  
+.star-btn {
+background-color: rgba(255, 204, 0, 0.8); /* Yellow background color for the button */
+border: none;
+border-radius: 4px; /* Make the button rounded */
+color: white; /* Text color */
+padding: 2px 5px; /* Padding for spacing */
+font-size: 0.8em; /* Font size */
+cursor: pointer; /* Pointer on hover */
+display: inline-flex;
+align-items: center;
+}
+
+.star-btn:hover {
+background-color: rgba(230, 184, 0, 0.8); /* Slightly darker yellow on hover */
+}
+
+.star-btn:focus {
+outline: none; /* Remove the outline when the button is focused */
+}
