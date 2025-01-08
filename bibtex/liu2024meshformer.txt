@@ -1,0 +1,6 @@
+@article{liu2024meshformer,
+  title={Meshformer: High-quality mesh generation with 3d-guided reconstruction model},
+  author={Liu, Minghua and Zeng, Chong and Wei, Xinyue and Shi, Ruoxi and Chen, Linghao and Xu, Chao and Zhang, Mengqi and Wang, Zhaoning and Zhang, Xiaoshuai and Liu, Isabella and others},
+  journal={arXiv preprint arXiv:2408.10198},
+  year={2024}
+}
