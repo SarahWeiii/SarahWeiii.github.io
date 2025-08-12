@@ -42,8 +42,19 @@
         </div>
     </header>
 
+    <nav class="navigation">
+        <div class="nav-content">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#news" class="nav-link">News</a>
+            <a href="#publications" class="nav-link">Publications</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#misc" class="nav-link">Misc</a>
+        </div>
+    </nav>
+
     <main class="content">
-        <section class="about-section">
+        <section id="about" class="about-section">
             <div class="about-block">
                 <p>
                     I am a research scientist and tech lead at <a href="https://www.hillbot.ai/">Hillbot Inc.</a> I obtained my Ph.D. degree in ECE at <a href="https://ucsd.edu/">UC San Diego</a> in 2025, advised by Prof. <a href="https://cseweb.ucsd.edu/~haosu/">Hao Su</a>. Before that, I received my B.E. degree in computer science and technology from Tongji University in 2020. My research interests are in Computer Graphics, Computer Vision and Embodied AI.
@@ -51,7 +62,7 @@
             </div>
         </section>
 
-        <section class="news-section">
+        <section id="news" class="news-section">
             <div class="news-header" onclick="toggleNews()">
                 <h2>News</h2>
                 <button class="news-toggle" id="news-toggle">Expand</button>
@@ -81,7 +92,7 @@
             </div>
         </section>
 
-        <section class="publications-section">
+        <section id="publications" class="publications-section">
             <h2>Publications and preprints</h2>
 
             <article class="publication">
@@ -154,9 +165,7 @@
             
             <article class="publication">
                 <div class="row">
-                    <a href="https://arxiv.org/abs/2501.03575" class="row-media-link">
-                        <div class="row-media" style="background-image: url(files/cosmos.png);"></div>
-                    </a>
+                    <div class="row-media" style="background-image: url(files/cosmos.png);"></div>
                     <div class="row-text">
                         <a class="publication-title" href="https://arxiv.org/abs/2501.03575">Cosmos: World Foundation Model Platform for Physical AI</a>
                         <div class="publication-authors">Core Contributor</div>
@@ -173,9 +182,7 @@
 
             <article class="publication">
                 <div class="row">
-                    <a href="https://arxiv.org/abs/2408.10198" class="row-media-link">
-                        <div class="row-media" style="background-image: url(files/meshformer.png);"></div>
-                    </a>
+                    <div class="row-media" style="background-image: url(files/meshformer.png);"></div>
                     <div class="row-text">
                         <a class="publication-title" href="https://arxiv.org/abs/2408.10198">MeshFormer: High-Quality Mesh Generation with 3D-Guided Reconstruction Model</a>
                         <div class="publication-authors">Minghua Liu*, Chong Zeng*, <span class="bold">Xinyue Wei</span>, Ruoxi Shi, Linghao Chen, Chao Xu, Mengqi Zhang, Zhaoning Wang, Xiaoshuai Zhang, Isabella Liu, Hongzhi Wu, Hao Su</div>
@@ -192,9 +199,7 @@
 
             <article class="publication">
                 <div class="row">
-                    <a href="https://arxiv.org/abs/2404.12385" class="row-media-link">
-                        <div class="row-media" style="background-image: url(files/meshlrm.png);"></div>
-                    </a>
+                    <div class="row-media" style="background-image: url(files/meshlrm.png);"></div>
                     <div class="row-text">
                         <a class="publication-title" href="https://arxiv.org/abs/2404.12385">MeshLRM: Large Reconstruction Model for High-Quality Meshes</a>
                         <div class="publication-authors"><span class="bold">Xinyue Wei*</span>, Kai Zhang*, Sai Bi, Hao Tan, Fujun Luan, Valentin Deschaintre, Kalyan Sunkavalli, Hao Su, Zexiang Xu</div>
@@ -211,9 +216,7 @@
 
             <article class="publication">
                 <div class="row">
-                    <a href="https://arxiv.org/abs/2312.09249" class="row-media-link">
-                        <div class="row-media" style="background-image: url(files/zerorf.png);"></div>
-                    </a>
+                    <div class="row-media" style="background-image: url(files/zerorf.png);"></div>
                     <div class="row-text">
                         <a class="publication-title" href="https://arxiv.org/abs/2312.09249">ZeroRF: Fast Sparse View 360° Reconstruction with Zero Pretraining</a>
                         <div class="publication-authors">Ruoxi Shi*, <span class="bold">Xinyue Wei*</span>, Cheng Wang, Hao Su</div>
@@ -230,9 +233,7 @@
 
             <article class="publication">
                 <div class="row">
-                    <a href="https://arxiv.org/abs/2311.07885" class="row-media-link">
-                        <div class="row-media" style="background-image: url(files/12345pp.gif);"></div>
-                    </a>
+                    <div class="row-media" style="background-image: url(files/12345pp.gif);"></div>
                     <div class="row-text">
                         <a class="publication-title" href="https://arxiv.org/abs/2311.07885">One-2-3-45++: Fast Single Image to 3D Objects with Consistent Multi-View Generation and 3D Diffusion</a>
                         <div class="publication-authors">Minghua Liu*, Ruoxi Shi*, Linghao Chen*, Zhuoyang Zhang*, Chao Xu*, <span class="bold">Xinyue Wei</span>, Hansheng Chen, Chong Zeng, Jiayuan Gu, Hao Su</div>
@@ -249,9 +250,7 @@
 
             <article class="publication">
                 <div class="row">
-                    <a href="https://arxiv.org/abs/2310.15110" class="row-media-link">
-                        <div class="row-media" style="background-image: url(files/0123pp.jpeg);"></div>
-                    </a>
+                    <div class="row-media" style="background-image: url(files/0123pp.jpeg);"></div>
                     <div class="row-text">
                         <a class="publication-title" href="https://arxiv.org/abs/2310.15110">Zero123++: A Single Image to Consistent Multi-view Diffusion Base Model</a>
                         <div class="publication-authors">Ruoxi Shi, Hansheng Chen, Zhuoyang Zhang, Minghua Liu, Chao Xu, <span class="bold">Xinyue Wei</span>, Linghao Chen, Chong Zeng, Hao Su</div>
@@ -268,9 +267,7 @@
 
             <article class="publication">
                 <div class="row">
-                    <a href="https://arxiv.org/abs/2305.17134" class="row-media-link">
-                        <div class="row-media" style="background-image: url(files/neum.gif);"></div>
-                    </a>
+                    <div class="row-media" style="background-image: url(files/neum.gif);"></div>
                     <div class="row-text">
                         <a class="publication-title" href="https://arxiv.org/abs/2305.17134">NeuManifold: Neural Watertight Manifold Reconstruction with Efficient and High-Quality Rendering Support</a>
                         <div class="publication-authors"><span class="bold">Xinyue Wei</span>, Fanbo Xiang, Sai Bi, Anpei Chen, Kalyan Sunkavalli, Zexiang Xu*, Hao Su*</div>
@@ -287,9 +284,7 @@
 
             <article class="publication">
                 <div class="row">
-                    <a href="https://arxiv.org/abs/2302.01226" class="row-media-link">
-                        <div class="row-media" style="background-image: url(files/dif.gif);"></div>
-                    </a>
+                    <div class="row-media" style="background-image: url(files/dif.gif);"></div>
                     <div class="row-text">
                         <a class="publication-title" href="https://arxiv.org/abs/2302.01226">Dictionary Fields: Learning a Neural Basis Decomposition</a>
                         <div class="publication-authors">Anpei Chen, Zexiang Xu, <span class="bold">Xinyue Wei</span>, Siyu Tang, Hao Su, Andreas Geiger</div>
@@ -306,9 +301,7 @@
 
             <article class="publication">
                 <div class="row">
-                    <a href="https://arxiv.org/abs/2302.04659" class="row-media-link">
-                        <div class="row-media" style="background-image: url(files/maniskill2.png);"></div>
-                    </a>
+                    <div class="row-media" style="background-image: url(files/maniskill2.png);"></div>
                     <div class="row-text">
                         <a class="publication-title" href="https://arxiv.org/abs/2302.04659">ManiSkill2: A Unified Benchmark for Generalizable Manipulation Skills</a>
                         <div class="publication-authors">Jiayuan Gu*, Fanbo Xiang*, Xuanlin Li+, Zhan Ling+, Xiqiang Liu+, Tongzhou Mu+, Yihe Tang+, Stone Tao+, <span class="bold">Xinyue Wei+</span>, Yunchao Yao+, Xiaodi Yuan, Pengwei Xie, Zhiao Huang, Rui Chen, Hao Su</div>
@@ -325,9 +318,7 @@
 
             <article class="publication">
                 <div class="row">
-                    <a href="https://arxiv.org/abs/2205.02961" class="row-media-link">
-                        <div class="row-media" style="background-image: url(files/coacd.jpg);"></div>
-                    </a>
+                    <div class="row-media" style="background-image: url(files/coacd.jpg);"></div>
                     <div class="row-text">
                         <a class="publication-title" href="https://arxiv.org/abs/2205.02961">Approximate Convex Decomposition for 3D Meshes with Collision-Aware Concavity and Tree Search</a>
                         <div class="publication-authors"><span class="bold">Xinyue Wei*</span>, Minghua Liu*, Zhan Ling, Hao Su</div>
@@ -344,9 +335,7 @@
 
             <article class="publication">
                 <div class="row">
-                    <a href="https://arxiv.org/abs/2108.06915" class="row-media-link">
-                        <div class="row-media" style="background-image: url(files/dsr.jpg);"></div>
-                    </a>
+                    <div class="row-media" style="background-image: url(files/dsr.jpg);"></div>
                     <div class="row-text">
                         <a class="publication-title" href="https://arxiv.org/abs/2108.06915">End-to-End Adaptive Monte Carlo Denoising and Super-Resolution</a>
                         <div class="publication-authors"><span class="bold">Xinyue Wei</span>, Haozhi Huang, Yujin Shi, Hongliang Yuan, Li Shen, Jue Wang</div>
@@ -360,7 +349,7 @@
             </article>
         </section>
 
-        <section class="experience-section">
+        <section id="experience" class="experience-section">
             <div class="section-card">
                 <h2>Experience</h2>
                 <div class="section-content">
@@ -416,7 +405,7 @@
             </div>
         </section>
 
-        <section class="services-section">
+        <section id="services" class="services-section">
             <div class="section-card">
                 <h2>Services</h2>
                 <div class="section-content">
@@ -425,7 +414,7 @@
             </div>
         </section>
 
-        <section class="misc-section">
+        <section id="misc" class="misc-section">
             <div class="section-card">
                 <h2>Misc.</h2>
                 <div class="section-content">
