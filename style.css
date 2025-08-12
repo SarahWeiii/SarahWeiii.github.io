@@ -167,7 +167,7 @@ a:hover {
     border: 2px solid #CEA2AC;
     border-radius: 8px;
     font-weight: 500;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     transition: all 0.3s ease;
     box-shadow: none;
     cursor: pointer;
@@ -254,7 +254,7 @@ a:hover {
 }
 
 .publication-title {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 600;
     color: #605F5E;
     line-height: 1.4;
@@ -267,14 +267,14 @@ a:hover {
 }
 
 .publication-authors {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     color: #6b7280;
     margin-bottom: 0.3rem;
     line-height: 1.4;
 }
 
 .publication-venue {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-weight: 500;
     margin-bottom: 0.5rem;
     color: #A675A1;
