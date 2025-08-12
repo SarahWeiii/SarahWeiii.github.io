@@ -1,279 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <title>Xinyue Wei</title>
     <meta name="author" content="Xinyue Wei">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Xinyue Wei">
-	<meta property="og:description" content="PhD candidate, UC San Diego">
+    <meta property="og:description" content="Research Scientist @ Hillbot Inc. | PhD in ECE, UC San Diego">
     <meta property="og:image" content="files/me.jpeg">
-	<meta property="og:url" content="https://SarahWeiii.github.io/">
-	<meta name="twitter:card" content="summary_large_image">
+    <meta property="og:url" content="https://SarahWeiii.github.io/">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="apple-touch-icon" href="files/ucsd-logo.png">
     <link rel="icon" type="image/png" href="files/ucsd-logo.png">
     <link rel="manifest" href="files/site.webmanifest">
     <link rel="stylesheet" href="style.css">
     <script src="githubStarCount.js"></script>
 </head>
+<body>
+    <header class="header">
+        <div class="content">
+            <div class="row">
+                <div class="header-profile-picture"></div>
+                <div class="header-text">
+                    <div class="header-name">
+                        <h1>Xinyue Wei</h1>
+                    </div>
+                    <div class="header-subtitle">
+                        Research Scientist @ Hillbot Inc.
+                    </div>
+                    <div class="header-email">
+                        sarahwei0210 [at] gmail [dot] com
+                    </div>
+                    <div class="header-links">
+                        <a href="https://scholar.google.com/citations?user=UipTKqoAAAAJ&hl=zh-CN">Google Scholar</a>
+                        <a href="https://github.com/SarahWeiii">GitHub</a>
+                        <a href="https://twitter.com/SarahWeii">Twitter</a>
+                        <a href="https://www.linkedin.com/in/xinyue-wei-852b2317b/">LinkedIn</a>
+                        <a href="files/cv.pdf">CV</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-<div class="header noselect">
-    <div class="row content">
-        <div class="header-profile-picture"></div>
-        <div class="header-text">
-            <div class="header-name">
-                <h1>Xinyue Wei</h1>
+    <main class="content">
+        <section class="about-section">
+            <div class="about-block">
+                <p>
+                    I am a research scientist and tech lead at <a href="https://www.hillbot.ai/">Hillbot Inc.</a> I obtained my Ph.D. degree in ECE at <a href="https://ucsd.edu/">UC San Diego</a> in 2025, advised by Prof. <a href="https://cseweb.ucsd.edu/~haosu/">Hao Su</a>. Before that, I received my B.E. degree in computer science and technology from Tongji University in 2020. My research interests are in Computer Graphics, Computer Vision and Embodied AI.
+                </p>
             </div>
-            <div class="header-subtitle">
-                Research Scientist @ Hillbot Inc.
-            </div>
-            <div class="header-email">
-                sarahwei0210 [at] gmail [dot] com
-            </div>
-            <div class="header-links">
-                <a class="btn" href="https://scholar.google.com/citations?user=UipTKqoAAAAJ&hl=zh-CN">Google Scholar</a> /
-                <a class="btn" href="https://github.com/SarahWeiii">GitHub</a> /
-                <a class="btn" href="https://twitter.com/SarahWeii">Twitter</a> /
-                <a class="btn" href="https://www.linkedin.com/in/xinyue-wei-852b2317b/">LinkedIn</a> /
-                <a class="btn" href="files/cv.pdf">CV</a>
-            </div>
-        </div>
-    </div>
-</div>
+        </section>
 
-<div class="content" style="font-size: 18px; padding-bottom: 64px;">
-    <div>
-        <p>
-            I am a research scientist and tech lead at <a href="https://www.hillbot.ai/">Hillbot Inc.</a> I obtained my Ph.D. degree in ECE at <a href="https://ucsd.edu/">UC San Diego</a> in 2025, advised by Prof. <a href="https://cseweb.ucsd.edu/~haosu/">Hao Su</a>. Before that, I received my B.E. degree in computer science and technology from Tongji University in 2020. My research interests are in Computer Graphics, Computer Vision and Embodied AI.
-        </p>
-    </div>
+        <section class="news-section">
+            <div class="news-header" onclick="toggleNews()">
+                <h2>News</h2>
+                <button class="news-toggle" id="news-toggle">Expand</button>
+            </div>
+            <div class="news-content" id="news-content">
+                <div class="news-item">
+                    <strong>2025.8</strong> Three papers accepted by SIGGRAPH Asia 2025, one paper accepted by Pacific Graphics 2025!
+                </div>
+                <div class="news-item">
+                    <strong>2025.6</strong> I joined Hillbot as a research scientist.
+                </div>
+                <div class="news-item">
+                    <strong>2025.6</strong> I was selected as an Outstanding Reviewer by CVPR 2025.
+                </div>
+                <div class="news-item">
+                    <strong>2025.5</strong> I successfully defended my Ph.D. thesis!
+                </div>
+                <div class="news-item">
+                    <strong>2024.9</strong> One paper accepted by NeurIPS 2024.
+                </div>
+                <div class="news-item">
+                    <strong>2024.5</strong> I was selected for the <a href="https://www.wigraph.org/programs/rising-stars/">WiGRAPH Rising Stars program</a>.
+                </div>
+                <div class="news-item">
+                    <strong>2024.2</strong> Two papers accepted by CVPR 2024.
+                </div>
+            </div>
+        </section>
 
-    <div>
-        <h2 class="noselect">News</h2>
-        [News 2025.8] Three papers accepted by SIGGRAPH Asia 2025, one paper accepted by Pacific Graphics 2025! <br/>
-        [News 2025.6] I joined Hillbot as a research scientist. <br/>
-        [News 2025.6] I was selected as an Outstanding Reviewer in CVPR 2025. <br/>
-        [News 2025.5] I successfully defended my Ph.D. thesis! <br/>
-        [News 2024.9] One paper accepted by NeurIPS 2024. <br/>
-        [News 2024.5] I was selected for the <a href="https://www.wigraph.org/programs/rising-stars/">WiGRAPH Rising Stars program</a>. <br/>
-        [News 2024.2] Two papers accepted by CVPR 2024.
-    </div>
+        <section class="publications-section">
+            <h2>Publications and preprints</h2>
 
-    <div>
-        <h2 class="noselect">Publications and preprints</h2>
-        <div class="publication row clearfix">
-            <div class="row-media" style="background-image: url(files/cosmos.png);"></div>
-            <div class="row-text">
-                <a class="publication-title bold" href="https://arxiv.org/abs/2501.03575">Cosmos: World Foundation Model Platform for Physical AI</a><br/>
-                Core Contributor<br/>
-                <span class="italic" style="color:indianred">White Paper</span><br/>
-                <a class="btn btn-red" href="https://arxiv.org/abs/2501.03575">PDF</a> 
-                / <a class="btn btn-dark" href="https://build.nvidia.com/explore/discover">Product</a>
-                / <a class="btn btn-dark" href="https://research.nvidia.com/labs/dir/cosmos1/">Project</a>
-                / <a class="btn btn-dark" href="bibtex/nvidia2025cosmos.txt">Bibtex</a>
-            </div>
-        </div>
-        <div class="publication row clearfix">
-            <div class="row-media" style="background-image: url(files/meshformer.png);"></div>
-            <div class="row-text">
-                <a class="publication-title bold" href="https://arxiv.org/abs/2408.10198">MeshFormer: High-Quality Mesh Generation with 3D-Guided Reconstruction Model</a><br/>
-                Minghua Liu*, Chong Zeng*, <span class="bold">Xinyue Wei</span>, Ruoxi Shi, Linghao Chen, Chao Xu, Mengqi Zhang, Zhaoning Wang, Xiaoshuai Zhang, Isabella Liu, Hongzhi Wu, Hao Su<br/>
-                <span class="italic" style="color:indianred">NeurIPS 2024 (Oral)</span><br/>
-                <a class="btn btn-red" href="https://arxiv.org/abs/2408.10198">PDF</a> 
-                / <a class="btn btn-dark" href="https://huggingface.co/spaces/sudo-ai/MeshFormer">Demo 🤗</a>
-                / <a class="btn btn-dark" href="https://meshformer3d.github.io/">Project</a>
-                / <a class="btn btn-dark" href="bibtex/liu2024meshformer.txt">Bibtex</a>
-            </div>
-        </div>
-        <div class="publication row clearfix">
-            <div class="row-media" style="background-image: url(files/meshlrm.png);"></div>
-            <div class="row-text">
-                <a class="publication-title bold" href="https://arxiv.org/abs/2404.12385">MeshLRM: Large Reconstruction Model for High-Quality Meshes</a><br/>
-                <span class="bold">Xinyue Wei*</span>, Kai Zhang*, Sai Bi, Hao Tan, Fujun Luan, Valentin Deschaintre, Kalyan Sunkavalli, Hao Su, Zexiang Xu<br/>
-                <span class="italic" style="color:indianred">Technical Report</span><br/>
-                <a class="btn btn-red" href="https://arxiv.org/abs/2404.12385">PDF</a> 
-                / <a class="btn btn-dark" href="https://huggingface.co/spaces/sudo-ai/MeshLRM">Demo 🤗</a>
-                / <a class="btn btn-dark" href="https://sarahweiii.github.io/meshlrm/">Project</a>
-                / <a class="btn btn-dark" href="bibtex/wei2024meshlrm.txt">Bibtex</a>
-            </div>
-        </div>
-        <div class="publication row clearfix">
-            <div class="row-media" style="background-image: url(files/zerorf.png);"></div>
-            <div class="row-text">
-                <a class="publication-title bold" href="https://arxiv.org/abs/2312.09249">ZeroRF: Fast Sparse View 360° Reconstruction with Zero Pretraining</a><br/>
-                Ruoxi Shi*, <span class="bold">Xinyue Wei*</span>, Cheng Wang, Hao Su<br/>
-                <span class="italic" style="color:indianred">CVPR 2024</span><br/>
-                <a class="btn btn-red" href="https://arxiv.org/abs/2312.09249">PDF</a> / 
-                <a class="btn btn-dark" href="https://github.com/eliphatfs/zerorf">Code <button id="star-button-0123pp" class="star-btn">⭐<span id="star-zerorf">0</span></button></a> / 
-                <a class="btn btn-dark" href="https://sarahweiii.github.io/zerorf/">Project</a> / 
-                <a class="btn btn-dark" href="bibtex/shi2023zerorf.txt">Bibtex</a>
-            </div>
-        </div>
-        <div class="publication row clearfix">
-            <div class="row-media" style="background-image: url(files/12345pp.gif);"></div>
-            <div class="row-text">
-                <a class="publication-title bold" href="https://arxiv.org/abs/2311.07885">One-2-3-45++: Fast Single Image to 3D Objects with Consistent Multi-View Generation and 3D Diffusion</a><br/>
-                Minghua Liu*, Ruoxi Shi*, Linghao Chen*, Zhuoyang Zhang*, Chao Xu*, <span class="bold">Xinyue Wei</span>, Hansheng Chen, Chong Zeng, Jiayuan Gu, Hao Su<br/>
-                <span class="italic" style="color:indianred">CVPR 2024</span><br/>
-                <a class="btn btn-red" href="https://arxiv.org/abs/2311.07885">PDF</a> / <a class="btn btn-dark" href="https://www.sudo.ai/3dgen">Demo 🤗</a> / <a class="btn btn-dark" href="https://sudo-ai-3d.github.io/One2345plus_page/">Project</a> / <a class="btn btn-dark" href="bibtex/liu2023one.txt">Bibtex</a>
-            </div>
-        </div>
-        <div class="publication row clearfix">
-            <div class="row-media" style="background-image: url(files/0123pp.jpeg);"></div>
-            <div class="row-text">
-                <a class="publication-title bold" href="https://arxiv.org/abs/2310.15110">Zero123++: A Single Image to Consistent Multi-view Diffusion Base Model</a><br/>
-                Ruoxi Shi, Hansheng Chen, Zhuoyang Zhang, Minghua Liu, Chao Xu, <span class="bold">Xinyue Wei</span>, Linghao Chen, Chong Zeng, Hao Su<br/>
-                <span class="italic" style="color:indianred">Technical Report</span><br/>
-                <a class="btn btn-red" href="https://arxiv.org/abs/2310.15110">PDF</a> / 
-                <a class="btn btn-dark" href="https://github.com/SUDO-AI-3D/zero123plus">Code <button id="star-button-0123pp" class="star-btn">⭐<span id="star-0123pp">0</span></button></a> / 
-                <a class="btn btn-dark" href="https://huggingface.co/spaces/sudo-ai/zero123plus-demo-space">Demo</a> / 
-                <a class="btn btn-dark" href="bibtex/shi2023zero123.txt">Bibtex</a>
-            </div>
-        </div>
-        <div class="publication row clearfix">
-            <div class="row-media" style="background-image: url(files/neum.gif);"></div>
-            <div class="row-text">
-                <a class="publication-title bold" href="https://arxiv.org/abs/2305.17134">NeuManifold: Neural Watertight Manifold Reconstruction with Efficient and High-Quality Rendering Support</a><br/>
-                <span class="bold">Xinyue Wei</span>, Fanbo Xiang, Sai Bi, Anpei Chen, Kalyan Sunkavalli, Zexiang Xu*, Hao Su*<br/>
-                <span class="italic" style="color:indianred">WACV 2025 (Oral)</span><br/>
-                <a class="btn btn-red" href="https://arxiv.org/abs/2305.17134">PDF</a> / 
-                <a class="btn btn-dark" href="https://github.com/SarahWeiii/diso">Code <button id="star-button-diso" class="star-btn">⭐<span id="star-diso">0</span></button></a> / 
-                <a class="btn btn-dark" href="https://sarahweiii.github.io/neumanifold/">Project</a> / 
-                <a class="btn btn-dark" href="bibtex/wei2023neumanifold.txt">Bibtex</a>
-            </div>
-        </div>
-        <div class="publication row clearfix">
-            <div class="row-media" style="background-image: url(files/dif.gif);"></div>
-            <div class="row-text">
-                <a class="publication-title bold" href="https://arxiv.org/abs/2302.01226">Dictionary Fields: Learning a Neural Basis Decomposition</a><br/>
-                Anpei Chen, Zexiang Xu, <span class="bold">Xinyue Wei</span>, Siyu Tang, Hao Su, Andreas Geiger<br/>
-                <span class="italic" style="color:indianred">SIGGRAPH 2023 (Journal Track)</span><br/>
-                <a class="btn btn-red" href="https://arxiv.org/abs/2302.01226">PDF</a> / 
-                <a class="btn btn-red" href="https://github.com/autonomousvision/factor-fields">Code <button id="star-button-dif" class="star-btn">⭐<span id="star-dif">0</span></button></a> /
-                <a class="btn btn-dark" href="https://apchenstu.github.io/FactorFields/">Project</a> /
-                <a class="btn btn-dark" href="bibtex/chen2023dictionary.txt">Bibtex</a>
-            </div>
-        </div>
-        <div class="publication row clearfix">
-            <div class="row-media" style="background-image: url(files/maniskill2.png);"></div>
-            <div class="row-text">
-                <a class="publication-title bold" href="https://arxiv.org/abs/2302.04659">ManiSkill2: A Unified Benchmark for Generalizable Manipulation Skills</a><br/>
-                Jiayuan Gu*, Fanbo Xiang*, Xuanlin Li+, Zhan Ling+, Xiqiang Liu+, Tongzhou Mu+, Yihe Tang+, Stone Tao+, <span class="bold">Xinyue Wei+</span>, Yunchao Yao+, Xiaodi Yuan, Pengwei Xie, Zhiao Huang, Rui Chen, Hao Su<br/>
-                <span class="italic" style="color:rgb(121, 117, 117); font-size: 14px;">*equally contributed authors are ordered by alphabets</span><br/>
-                <span class="italic" style="color:indianred">ICLR 2023</span><br/>
-                <a class="btn btn-red" href="https://arxiv.org/abs/2302.04659">PDF</a> / 
-                <a class="btn btn-red" href="https://github.com/haosulab/ManiSkill">Code <button id="star-button-maniskill" class="star-btn">⭐<span id="star-maniskill">0</span></button></a> / 
-                <a class="btn btn-dark" href="https://maniskill2.github.io/">Project</a> / 
-                <a class="btn btn-dark" href="bibtex/gu2023maniskill2.txt">Bibtex</a>
-            </div>
-        </div>
-        <div class="publication row clearfix">
-            <div class="row-media" style="background-image: url(files/coacd.jpg);"></div>
-            <div class="row-text">
-                <a class="publication-title bold" href="https://arxiv.org/abs/2205.02961">Approximate Convex Decomposition for 3D Meshes with Collision-Aware Concavity and Tree Search</a><br/>
-                <span class="bold">Xinyue Wei*</span>, Minghua Liu*, Zhan Ling, Hao Su<br/>
-                <span class="italic" style="color:indianred">SIGGRAPH 2022 (Journal track)</span><br/>
-                <a class="btn btn-red" href="https://arxiv.org/abs/2205.02961">PDF</a> / 
-                <a class="btn btn-red" href="https://github.com/SarahWeiii/CoACD">Code <button id="star-button-coacd" class="star-btn">⭐<span id="star-coacd">0</span></button></a> / 
-                <a class="btn btn-dark" href="https://colin97.github.io/CoACD">Project</a> / 
-                <a class="btn btn-dark" href="bibtex/wei2022approximate.txt">Bibtex</a>
-            </div>
-        </div>
-        <div class="publication row clearfix">
-            <div class="row-media" style="background-image: url(files/dsr.jpg);"></div>
-            <div class="row-text">
-                <a class="publication-title bold" href="https://arxiv.org/abs/2108.06915">End-to-End Adaptive Monte Carlo Denoising and Super-Resolution</a><br/>
-                <span class="bold">Xinyue Wei</span>, Haozhi Huang, Yujin Shi, Hongliang Yuan, Li Shen, Jue Wang<br/>
-                <span class="italic" style="color:indianred">Arxiv 2021</span><br/>
-                <a class="btn btn-red" href="https://arxiv.org/abs/2108.06915">PDF</a> / <a class="btn btn-dark" href="bibtex/wei2021end.txt">Bibtex</a>
-            </div>
-        </div>
-        <!-- <div class="publication row clearfix">
-            <div class="row-media" style="background-image: url(files/rsa.png);"></div>
-            <div class="row-text">
-                <a class="publication-title bold" href="https://arxiv.org/abs/1912.01180">RSA: Randomized Simulation as Augmentation for Robust Human Action Recognition</a><br/>
-                Yi Zhang*, <span class="bold">Xinyue Wei*</span>, Weichao Qiu, Zihao Xiao, Gregory D. Hager, Alan Yuille<br/>
-                <span class="italic" style="color:indianred">Arxiv 2019</span><br/>
-                <a class="btn btn-red" href="https://arxiv.org/pdf/1912.01180">PDF</a> / <a class="btn btn-dark" href="bibtex/zhang2019rsa.txt">Bibtex</a>
-            </div>
-        </div> -->
-    </div>
-    <div>
-        <h2 class="noselect">Experience</h2>
-        <div class="publication row clearfix">
-            <div class="row-logo" style="background-image: url(files/hillbot-logo.png);"></div>
-            <div class="row-text" style="margin-top: 0px">
-                <a class="publication-title bold" href="https://www.hillbot.ai/">Hillbot (sudoAI)</a><br/>
-                <span class="bold">Research Scientist</span>, June 2025 - Present
-            </div>
-        </div>
-        <div class="publication row clearfix">
-            <div class="row-logo" style="background-image: url(files/hillbot-logo.png);"></div>
-            <div class="row-text" style="margin-top: 0px">
-                <a class="publication-title bold" href="https://www.hillbot.ai/">Hillbot (sudoAI)</a><br/>
-                <span class="bold">Research Intern</span>, Jan 2025 - June 2025
-            </div>
-        </div>
-        <div class="publication row clearfix">
-            <div class="row-logo" style="background-image: url(files/nvidia-logo.png);"></div>
-            <div class="row-text" style="margin-top: 0px">
-                <a class="publication-title bold" href="https://research.nvidia.com/home">NVIDIA</a><br/>
-                <span class="bold">Research Intern</span>, Oct 2024 - Jan 2025
-            </div>
-        </div>
-        <div class="publication row clearfix">
-            <div class="row-logo" style="background-image: url(files/hillbot-logo.png);"></div>
-            <div class="row-text" style="margin-top: 0px">
-                <a class="publication-title bold" href="https://www.hillbot.ai/">Hillbot (sudoAI)</a><br/>
-                <span class="bold">Research Intern</span>, Mar 2024 - Oct 2024
-            </div>
-        </div>
-        <div class="publication row clearfix">
-            <div class="row-logo" style="background-image: url(files/adobe-logo.png);"></div>
-            <div class="row-text" style="margin-top: 0px">
-                <a class="publication-title bold" href="https://research.adobe.com/">Adobe</a><br/>
-                <span class="bold">Research Intern</span>, Oct 2023 - Mar 2024
-            </div>
-        </div>
-        <div class="publication row clearfix">
-            <div class="row-logo" style="background-image: url(files/adobe-logo.png);"></div>
-            <div class="row-text" style="margin-top: 0px">
-                <a class="publication-title bold" href="https://research.adobe.com/">Adobe</a><br/>
-                <span class="bold">Research Intern, GILL Group</span>, Jun 2022 - Mar 2023
-            </div>
-        </div>
-        <div class="publication row clearfix">
-            <div class="row-logo" style="background-image: url(files/tencent-logo.jpeg);"></div>
-            <div class="row-text" style="margin-top: 0px">
-                <a class="publication-title bold" href="https://ai.tencent.com/ailab/zh/index">Tencent AI Lab</a><br/>
-                <span class="bold">Research Intern, AI graphics Group</span>, Mar 2020 - Feb 2021
-            </div>
-        </div>
-        <div class="publication row clearfix">
-            <div class="row-logo" style="background-image: url(files/jhu-logo.jpeg);"></div>
-            <div class="row-text" style="margin-top: 0px">
-                <a class="publication-title bold" href="https://www.jhu.edu/">Johns Hopkins University</a><br/>
-                <span class="bold">Research Intern, CCVL Lab</span>, Jul 2019 - Oct 2019
-            </div>
-        </div>
-    </div>
-    <div>
-        <h2 class="noselect">Services</h2>
-        Reviewer for SIGGRAPH'22'25, SIGGRAPH Asia'23'25, CVPR'22'23'24'25, ECCV'22'24, ICCV'23'25, 3DV'23, ICRA'23'24, WACV'25, IEEE CGA
-    </div>
-    <div>
-        <h2 class="noselect">Misc.</h2>
-        I like photography (<a href="https://www.instagram.com/sarahwei_photos/">@sarahwei_photos</a>), visiting museums, singing and piano.
-    </div>
-</div>
-<div class="footer noselect">
-    <div class="footer-content" style="display: flex; justify-content: center;">
-        &copy; 2023 Xinyue Wei. Website design credit to Nicklas Hansen.
-    </div>
-</div>
+            <article class="publication">
+                <div class="row">
+                    <a href="" class="row-media-link">
+                        <div class="row-media" style="background-image: url(files/freeart3d.png);"></div>
+                    </a>
+                    <div class="row-text">
+                        <a class="publication-title" href="">FreeArt3D: Training-Free Articulated Object Generation using 3D Diffusion</a>
+                        <div class="publication-authors">Chuhao Chen, Isabella Liu, <span class="bold">Xinyue Wei</span>, Hao Su, Minghua Liu</div>
+                        <div class="publication-venue"><span class="italic" style="color:indianred">SIGGRAPH Asia 2025 (Conference Track)</span></div>
+                        <!-- <div class="publication-links">
+                            <a class="btn btn-red" href="https://arxiv.org/abs/2501.03575">PDF</a>
+                            <a class="btn btn-dark" href="https://build.nvidia.com/explore/discover">Product</a>
+                            <a class="btn btn-dark" href="https://research.nvidia.com/labs/dir/cosmos1/">Project</a>
+                            <a class="btn btn-dark" href="bibtex/nvidia2025cosmos.txt">Bibtex</a>
+                        </div> -->
+                    </div>
+                </div>
+            </article>
 
-<script>
-    fetchStarCount('SarahWeiii', 'CoACD', 'star-coacd');
-    fetchStarCount('haosulab', 'ManiSkill', 'star-maniskill');
-    fetchStarCount('autonomousvision', 'factor-fields', 'star-dif');
-    fetchStarCount('SarahWeiii', 'diso', 'star-diso');
-    fetchStarCount('SUDO-AI-3D', 'zero123plus', 'star-0123pp');
-    fetchStarCount('eliphatfs', 'zerorf', 'star-zerorf');
-</script>
+            <article class="publication">
+                <div class="row">
+                    <a href="" class="row-media-link">
+                        <div class="row-media" style="background-image: url(files/larm.png);"></div>
+                    </a>
+                    <div class="row-text">
+                        <a class="publication-title" href="">LARM: A Large Articulated Object Reconstruction Model</a>
+                        <div class="publication-authors">Sylvia Yuan, Ruoxi Shi, <span class="bold">Xinyue Wei</span>, Xiaoshuai Zhang, Hao Su, Minghua Liu</div>
+                        <div class="publication-venue"><span class="italic" style="color:indianred">SIGGRAPH Asia 2025 (Conference Track)</span></div>
+                        <!-- <div class="publication-links">
+                            <a class="btn btn-red" href="https://arxiv.org/abs/2501.03575">PDF</a>
+                            <a class="btn btn-dark" href="https://build.nvidia.com/explore/discover">Product</a>
+                            <a class="btn btn-dark" href="https://research.nvidia.com/labs/dir/cosmos1/">Project</a>
+                            <a class="btn btn-dark" href="bibtex/nvidia2025cosmos.txt">Bibtex</a>
+                        </div> -->
+                    </div>
+                </div>
+            </article>
+
+            <article class="publication">
+                <div class="row">
+                    <a href="" class="row-media-link">
+                        <div class="row-media" style="background-image: url(files/partuv.png);"></div>
+                    </a>
+                    <div class="row-text">
+                        <a class="publication-title" href="">PartUV: Part-Based UV Unwrapping of 3D Meshes</a>
+                        <div class="publication-authors">Zhaoning Wang, <span class="bold">Xinyue Wei</span>, Ruoxi Shi, Xiaoshuai Zhang, Hao Su, Minghua Liu</div>
+                        <div class="publication-venue"><span class="italic" style="color:indianred">SIGGRAPH Asia 2025 (Conference Track)</span></div>
+                        <!-- <div class="publication-links">
+                            <a class="btn btn-red" href="https://arxiv.org/abs/2501.03575">PDF</a>
+                            <a class="btn btn-dark" href="https://build.nvidia.com/explore/discover">Product</a>
+                            <a class="btn btn-dark" href="https://research.nvidia.com/labs/dir/cosmos1/">Project</a>
+                            <a class="btn btn-dark" href="bibtex/nvidia2025cosmos.txt">Bibtex</a>
+                        </div> -->
+                    </div>
+                </div>
+            </article>
+
+            <article class="publication">
+                <div class="row">
+                    <a href="" class="row-media-link">
+                        <div class="row-media" style="background-image: url(files/pamo.png);"></div>
+                    </a>
+                    <div class="row-text">
+                        <a class="publication-title" href="">PaMO: Parallel Mesh Optimization for Intersection-Free Low-Poly Modeling on the GPU</a>
+                        <div class="publication-authors">Seonghun Oh*, Xiaodi Yuan*, <span class="bold">Xinyue Wei*</span>, Ruoxi Shi, Fanbo Xiang, Minghua Liu, Hao Su</div>
+                        <div class="publication-venue"><span class="italic" style="color:indianred">Pacific Graphics 2025 (Journal Track)</span></div>
+                        <!-- <div class="publication-links">
+                            <a class="btn btn-red" href="https://arxiv.org/abs/2501.03575">PDF</a>
+                            <a class="btn btn-dark" href="https://build.nvidia.com/explore/discover">Product</a>
+                            <a class="btn btn-dark" href="https://research.nvidia.com/labs/dir/cosmos1/">Project</a>
+                            <a class="btn btn-dark" href="bibtex/nvidia2025cosmos.txt">Bibtex</a>
+                        </div> -->
+                    </div>
+                </div>
+            </article>
+            
+            <article class="publication">
+                <div class="row">
+                    <a href="https://arxiv.org/abs/2501.03575" class="row-media-link">
+                        <div class="row-media" style="background-image: url(files/cosmos.png);"></div>
+                    </a>
+                    <div class="row-text">
+                        <a class="publication-title" href="https://arxiv.org/abs/2501.03575">Cosmos: World Foundation Model Platform for Physical AI</a>
+                        <div class="publication-authors">Core Contributor</div>
+                        <div class="publication-venue"><span class="italic" style="color:indianred">White Paper</span></div>
+                        <div class="publication-links">
+                            <a class="btn btn-red" href="https://arxiv.org/abs/2501.03575">PDF</a>
+                            <a class="btn btn-dark" href="https://build.nvidia.com/explore/discover">Product</a>
+                            <a class="btn btn-dark" href="https://research.nvidia.com/labs/dir/cosmos1/">Project</a>
+                            <a class="btn btn-dark" href="bibtex/nvidia2025cosmos.txt">Bibtex</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="publication">
+                <div class="row">
+                    <a href="https://arxiv.org/abs/2408.10198" class="row-media-link">
+                        <div class="row-media" style="background-image: url(files/meshformer.png);"></div>
+                    </a>
+                    <div class="row-text">
+                        <a class="publication-title" href="https://arxiv.org/abs/2408.10198">MeshFormer: High-Quality Mesh Generation with 3D-Guided Reconstruction Model</a>
+                        <div class="publication-authors">Minghua Liu*, Chong Zeng*, <span class="bold">Xinyue Wei</span>, Ruoxi Shi, Linghao Chen, Chao Xu, Mengqi Zhang, Zhaoning Wang, Xiaoshuai Zhang, Isabella Liu, Hongzhi Wu, Hao Su</div>
+                        <div class="publication-venue"><span class="italic" style="color:indianred">NeurIPS 2024 (Oral)</span></div>
+                        <div class="publication-links">
+                            <a class="btn btn-red" href="https://arxiv.org/abs/2408.10198">PDF</a>
+                            <a class="btn btn-dark" href="https://huggingface.co/spaces/sudo-ai/MeshFormer">Demo</a>
+                            <a class="btn btn-dark" href="https://meshformer3d.github.io/">Project</a>
+                            <a class="btn btn-dark" href="bibtex/liu2024meshformer.txt">Bibtex</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="publication">
+                <div class="row">
+                    <a href="https://arxiv.org/abs/2404.12385" class="row-media-link">
+                        <div class="row-media" style="background-image: url(files/meshlrm.png);"></div>
+                    </a>
+                    <div class="row-text">
+                        <a class="publication-title" href="https://arxiv.org/abs/2404.12385">MeshLRM: Large Reconstruction Model for High-Quality Meshes</a>
+                        <div class="publication-authors"><span class="bold">Xinyue Wei*</span>, Kai Zhang*, Sai Bi, Hao Tan, Fujun Luan, Valentin Deschaintre, Kalyan Sunkavalli, Hao Su, Zexiang Xu</div>
+                        <div class="publication-venue"><span class="italic" style="color:indianred">Technical Report</span></div>
+                        <div class="publication-links">
+                            <a class="btn btn-red" href="https://arxiv.org/abs/2404.12385">PDF</a>
+                            <a class="btn btn-dark" href="https://huggingface.co/spaces/sudo-ai/MeshLRM">Demo</a>
+                            <a class="btn btn-dark" href="https://sarahweiii.github.io/meshlrm/">Project</a>
+                            <a class="btn btn-dark" href="bibtex/wei2024meshlrm.txt">Bibtex</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="publication">
+                <div class="row">
+                    <a href="https://arxiv.org/abs/2312.09249" class="row-media-link">
+                        <div class="row-media" style="background-image: url(files/zerorf.png);"></div>
+                    </a>
+                    <div class="row-text">
+                        <a class="publication-title" href="https://arxiv.org/abs/2312.09249">ZeroRF: Fast Sparse View 360° Reconstruction with Zero Pretraining</a>
+                        <div class="publication-authors">Ruoxi Shi*, <span class="bold">Xinyue Wei*</span>, Cheng Wang, Hao Su</div>
+                        <div class="publication-venue"><span class="italic" style="color:indianred">CVPR 2024</span></div>
+                        <div class="publication-links">
+                            <a class="btn btn-red" href="https://arxiv.org/abs/2312.09249">PDF</a>
+                            <a class="btn btn-dark" href="https://github.com/eliphatfs/zerorf">Code</a>
+                            <a class="btn btn-dark" href="https://sarahweiii.github.io/zerorf/">Project</a>
+                            <a class="btn btn-dark" href="bibtex/shi2023zerorf.txt">Bibtex</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="publication">
+                <div class="row">
+                    <a href="https://arxiv.org/abs/2311.07885" class="row-media-link">
+                        <div class="row-media" style="background-image: url(files/12345pp.gif);"></div>
+                    </a>
+                    <div class="row-text">
+                        <a class="publication-title" href="https://arxiv.org/abs/2311.07885">One-2-3-45++: Fast Single Image to 3D Objects with Consistent Multi-View Generation and 3D Diffusion</a>
+                        <div class="publication-authors">Minghua Liu*, Ruoxi Shi*, Linghao Chen*, Zhuoyang Zhang*, Chao Xu*, <span class="bold">Xinyue Wei</span>, Hansheng Chen, Chong Zeng, Jiayuan Gu, Hao Su</div>
+                        <div class="publication-venue"><span class="italic" style="color:indianred">CVPR 2024</span></div>
+                        <div class="publication-links">
+                            <a class="btn btn-red" href="https://arxiv.org/abs/2311.07885">PDF</a>
+                            <a class="btn btn-dark" href="https://www.sudo.ai/3dgen">Demo</a>
+                            <a class="btn btn-dark" href="https://sudo-ai-3d.github.io/One2345plus_page/">Project</a>
+                            <a class="btn btn-dark" href="bibtex/liu2023one.txt">Bibtex</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="publication">
+                <div class="row">
+                    <a href="https://arxiv.org/abs/2310.15110" class="row-media-link">
+                        <div class="row-media" style="background-image: url(files/0123pp.jpeg);"></div>
+                    </a>
+                    <div class="row-text">
+                        <a class="publication-title" href="https://arxiv.org/abs/2310.15110">Zero123++: A Single Image to Consistent Multi-view Diffusion Base Model</a>
+                        <div class="publication-authors">Ruoxi Shi, Hansheng Chen, Zhuoyang Zhang, Minghua Liu, Chao Xu, <span class="bold">Xinyue Wei</span>, Linghao Chen, Chong Zeng, Hao Su</div>
+                        <div class="publication-venue"><span class="italic" style="color:indianred">Technical Report</span></div>
+                        <div class="publication-links">
+                            <a class="btn btn-red" href="https://arxiv.org/abs/2310.15110">PDF</a>
+                            <a class="btn btn-dark" href="https://github.com/SUDO-AI-3D/zero123plus">Code</a>
+                            <a class="btn btn-dark" href="https://huggingface.co/spaces/sudo-ai/zero123plus-demo-space">Demo</a>
+                            <a class="btn btn-dark" href="bibtex/shi2023zero123.txt">Bibtex</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="publication">
+                <div class="row">
+                    <a href="https://arxiv.org/abs/2305.17134" class="row-media-link">
+                        <div class="row-media" style="background-image: url(files/neum.gif);"></div>
+                    </a>
+                    <div class="row-text">
+                        <a class="publication-title" href="https://arxiv.org/abs/2305.17134">NeuManifold: Neural Watertight Manifold Reconstruction with Efficient and High-Quality Rendering Support</a>
+                        <div class="publication-authors"><span class="bold">Xinyue Wei</span>, Fanbo Xiang, Sai Bi, Anpei Chen, Kalyan Sunkavalli, Zexiang Xu*, Hao Su*</div>
+                        <div class="publication-venue"><span class="italic" style="color:indianred">WACV 2025 (Oral)</span></div>
+                        <div class="publication-links">
+                            <a class="btn btn-red" href="https://arxiv.org/abs/2305.17134">PDF</a>
+                            <a class="btn btn-dark" href="https://github.com/SarahWeiii/diso">Code</a>
+                            <a class="btn btn-dark" href="https://sarahweiii.github.io/neumanifold/">Project</a>
+                            <a class="btn btn-dark" href="bibtex/wei2023neumanifold.txt">Bibtex</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="publication">
+                <div class="row">
+                    <a href="https://arxiv.org/abs/2302.01226" class="row-media-link">
+                        <div class="row-media" style="background-image: url(files/dif.gif);"></div>
+                    </a>
+                    <div class="row-text">
+                        <a class="publication-title" href="https://arxiv.org/abs/2302.01226">Dictionary Fields: Learning a Neural Basis Decomposition</a>
+                        <div class="publication-authors">Anpei Chen, Zexiang Xu, <span class="bold">Xinyue Wei</span>, Siyu Tang, Hao Su, Andreas Geiger</div>
+                        <div class="publication-venue"><span class="italic" style="color:indianred">SIGGRAPH 2023 (Journal Track)</span></div>
+                        <div class="publication-links">
+                            <a class="btn btn-red" href="https://arxiv.org/abs/2302.01226">PDF</a>
+                            <a class="btn btn-dark" href="https://github.com/autonomousvision/factor-fields">Code</a>
+                            <a class="btn btn-dark" href="https://apchenstu.github.io/FactorFields/">Project</a>
+                            <a class="btn btn-dark" href="bibtex/chen2023dictionary.txt">Bibtex</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="publication">
+                <div class="row">
+                    <a href="https://arxiv.org/abs/2302.04659" class="row-media-link">
+                        <div class="row-media" style="background-image: url(files/maniskill2.png);"></div>
+                    </a>
+                    <div class="row-text">
+                        <a class="publication-title" href="https://arxiv.org/abs/2302.04659">ManiSkill2: A Unified Benchmark for Generalizable Manipulation Skills</a>
+                        <div class="publication-authors">Jiayuan Gu*, Fanbo Xiang*, Xuanlin Li+, Zhan Ling+, Xiqiang Liu+, Tongzhou Mu+, Yihe Tang+, Stone Tao+, <span class="bold">Xinyue Wei+</span>, Yunchao Yao+, Xiaodi Yuan, Pengwei Xie, Zhiao Huang, Rui Chen, Hao Su</div>
+                        <div class="publication-venue"><span class="italic" style="color:indianred">ICLR 2023</span></div>
+                        <div class="publication-links">
+                            <a class="btn btn-red" href="https://arxiv.org/abs/2302.04659">PDF</a>
+                            <a class="btn btn-dark" href="https://github.com/haosulab/ManiSkill">Code</a>
+                            <a class="btn btn-dark" href="https://maniskill2.github.io/">Project</a>
+                            <a class="btn btn-dark" href="bibtex/gu2023maniskill2.txt">Bibtex</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="publication">
+                <div class="row">
+                    <a href="https://arxiv.org/abs/2205.02961" class="row-media-link">
+                        <div class="row-media" style="background-image: url(files/coacd.jpg);"></div>
+                    </a>
+                    <div class="row-text">
+                        <a class="publication-title" href="https://arxiv.org/abs/2205.02961">Approximate Convex Decomposition for 3D Meshes with Collision-Aware Concavity and Tree Search</a>
+                        <div class="publication-authors"><span class="bold">Xinyue Wei*</span>, Minghua Liu*, Zhan Ling, Hao Su</div>
+                        <div class="publication-venue"><span class="italic" style="color:indianred">SIGGRAPH 2022 (Journal track)</span></div>
+                        <div class="publication-links">
+                            <a class="btn btn-red" href="https://arxiv.org/abs/2205.02961">PDF</a>
+                            <a class="btn btn-dark" href="https://github.com/SarahWeiii/CoACD">Code</a>
+                            <a class="btn btn-dark" href="https://colin97.github.io/CoACD">Project</a>
+                            <a class="btn btn-dark" href="bibtex/wei2022approximate.txt">Bibtex</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="publication">
+                <div class="row">
+                    <a href="https://arxiv.org/abs/2108.06915" class="row-media-link">
+                        <div class="row-media" style="background-image: url(files/dsr.jpg);"></div>
+                    </a>
+                    <div class="row-text">
+                        <a class="publication-title" href="https://arxiv.org/abs/2108.06915">End-to-End Adaptive Monte Carlo Denoising and Super-Resolution</a>
+                        <div class="publication-authors"><span class="bold">Xinyue Wei</span>, Haozhi Huang, Yujin Shi, Hongliang Yuan, Li Shen, Jue Wang</div>
+                        <div class="publication-venue"><span class="italic" style="color:indianred">Arxiv 2021</span></div>
+                        <div class="publication-links">
+                            <a class="btn btn-red" href="https://arxiv.org/abs/2108.06915">PDF</a>
+                            <a class="btn btn-dark" href="bibtex/wei2021end.txt">Bibtex</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="experience-section">
+            <div class="section-card">
+                <h2>Experience</h2>
+                <div class="section-content">
+                    <div class="experience-item">
+                        <div class="experience-logo" style="background-image: url(files/hillbot-logo.png);"></div>
+                        <div class="experience-content">
+                            <strong>Research Scientist</strong> at <a href="https://www.hillbot.ai/">Hillbot (sudoAI)</a>, June 2025 - Present
+                        </div>
+                    </div>
+                    <div class="experience-item">
+                        <div class="experience-logo" style="background-image: url(files/hillbot-logo.png);"></div>
+                        <div class="experience-content">
+                            <strong>Research Intern</strong> at <a href="https://www.hillbot.ai/">Hillbot (sudoAI)</a>, Jan 2025 - June 2025
+                        </div>
+                    </div>
+                    <div class="experience-item">
+                        <div class="experience-logo" style="background-image: url(files/nvidia-logo.png);"></div>
+                        <div class="experience-content">
+                            <strong>Research Intern</strong> at <a href="https://research.nvidia.com/home">NVIDIA</a>, Oct 2024 - Jan 2025
+                        </div>
+                    </div>
+                    <div class="experience-item">
+                        <div class="experience-logo" style="background-image: url(files/hillbot-logo.png);"></div>
+                        <div class="experience-content">
+                            <strong>Research Intern</strong> at <a href="https://www.hillbot.ai/">Hillbot (sudoAI)</a>, Mar 2024 - Oct 2024
+                        </div>
+                    </div>
+                    <div class="experience-item">
+                        <div class="experience-logo" style="background-image: url(files/adobe-logo.png);"></div>
+                        <div class="experience-content">
+                            <strong>Research Intern</strong> at <a href="https://research.adobe.com/">Adobe</a>, Oct 2023 - Mar 2024
+                        </div>
+                    </div>
+                    <div class="experience-item">
+                        <div class="experience-logo" style="background-image: url(files/adobe-logo.png);"></div>
+                        <div class="experience-content">
+                            <strong>Research Intern, GILL Group</strong> at <a href="https://research.adobe.com/">Adobe</a>, Jun 2022 - Mar 2023
+                        </div>
+                    </div>
+                    <div class="experience-item">
+                        <div class="experience-logo" style="background-image: url(files/tencent-logo.jpeg);"></div>
+                        <div class="experience-content">
+                            <strong>Research Intern, AI graphics Group</strong> at <a href="https://ai.tencent.com/ailab/zh/index">Tencent AI Lab</a>, Mar 2020 - Feb 2021
+                        </div>
+                    </div>
+                    <div class="experience-item">
+                        <div class="experience-logo" style="background-image: url(files/jhu-logo.jpeg);"></div>
+                        <div class="experience-content">
+                            <strong>Research Intern, CCVL Lab</strong> at <a href="https://www.jhu.edu/">Johns Hopkins University</a>, Jul 2019 - Oct 2019
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-section">
+            <div class="section-card">
+                <h2>Services</h2>
+                <div class="section-content">
+                    <p>Reviewer for SIGGRAPH'22'25, SIGGRAPH Asia'23'25, CVPR'22'23'24'25, ECCV'22'24, ICCV'23'25, 3DV'23, ICRA'23'24, WACV'25, IEEE CGA</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="misc-section">
+            <div class="section-card">
+                <h2>Misc.</h2>
+                <div class="section-content">
+                    <p>I like photography (<a href="https://www.instagram.com/sarahwei_photos/">@sarahwei_photos</a>), visiting museums, singing and piano.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            &copy; 2023 Xinyue Wei. Website design credit to Nicklas Hansen.
+        </div>
+    </footer>
+
+    <script>
+        // News expand/collapse functionality
+        function toggleNews() {
+            const content = document.getElementById('news-content');
+            const toggle = document.getElementById('news-toggle');
+            
+            if (content.classList.contains('expanded')) {
+                content.classList.remove('expanded');
+                toggle.textContent = 'Expand';
+            } else {
+                content.classList.add('expanded');
+                toggle.textContent = 'Collapse';
+            }
+        }
+    </script>
+</body>
+</html>
