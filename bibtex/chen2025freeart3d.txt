@@ -1,0 +1,6 @@
+@InProceedings{chen2025freeart3d,
+  title = {FreeArt3D: Training-Free Articulated Object Generation using 3D Diffusion},
+  author = {Chen, Chuhao and Liu, Isabella and Wei, Xinyue and Su, Hao and Liu, Minghua},
+  booktitle = {SIGGRAPH Asia 2025 Conference Papers},
+  year = {2025}
+}
