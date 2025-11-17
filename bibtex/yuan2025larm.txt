@@ -1,0 +1,6 @@
+@article{yuan2025larmlargearticulatedobjectreconstruction,
+    title={LARM: A Large Articulated-Object Reconstruction Model}, 
+    author={Yuan, Sylvia and Shi, Ruoxi and Wei, Xinyue and Zhang, Xiaoshuai and Su, Hao and Liu, Minghua},
+    journal={arXiv preprint arXiv:2511.11563},
+    year={2025},
+}
