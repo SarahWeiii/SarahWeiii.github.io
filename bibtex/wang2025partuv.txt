@@ -1,0 +1,6 @@
+@inproceedings{wang2025partuv,
+  title     = {PartUV: Part-Based UV Unwrapping of 3D Meshes},
+  author    = {Wang, Zhaoning and Wei, Xinyue and Shi, Ruoxi and Zhang, Xiaoshuai and Su, Hao and Liu, Minghua},
+  booktitle = {ACM SIGGRAPH Asia Conference and Exhibition on Computer Graphics and Interactive Techniques},
+  year      = {2025}
+}
