@@ -356,59 +356,82 @@ a:hover {
 }
 
 .news-toggle {
-    background: #D4A9A5;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    padding: 0.3rem 0.6rem;
-    font-size: 0.7rem;
+    background: transparent;
+    color: #8E5C89;
+    border: 1px solid rgba(166, 117, 161, 0.25);
+    border-radius: 999px;
+    padding: 0.25rem 0.7rem;
+    font-size: 0.72rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 6px rgba(206, 162, 172, 0.2);
+    transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .news-toggle:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 10px rgba(206, 162, 172, 0.3);
-    background: #B07BA5;
+    background: rgba(166, 117, 161, 0.07);
+    border-color: #A675A1;
 }
 
+/* collapsed list fades out through a gradient mask */
 .news-content {
-    max-height: 140px;
+    max-height: 150px;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    position: relative;
+    padding-left: 0.5rem;
+    transition: max-height 0.35s ease;
+    -webkit-mask-image: linear-gradient(#000 60%, transparent);
+    mask-image: linear-gradient(#000 60%, transparent);
 }
 
 .news-content.expanded {
-    max-height: 1000px;
+    max-height: 1200px;
+    -webkit-mask-image: none;
+    mask-image: none;
+}
+
+/* timeline rail */
+.news-content::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: rgba(166, 117, 161, 0.16);
+    border-radius: 1px;
 }
 
 .news-item {
+    display: grid;
+    grid-template-columns: 5.5rem 1fr;
+    gap: 1rem;
     position: relative;
-    padding: 0.4rem 0 0.4rem 1.1rem;
-    border-bottom: 1px solid rgba(166, 117, 161, 0.1);
-    font-size: 0.9rem;
-    line-height: 1.5;
+    padding: 0.45rem 0 0.45rem 1.1rem;
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #6E5F63;
 }
 
 .news-item::before {
     content: '';
     position: absolute;
-    left: 0;
-    top: 1em;
-    width: 7px;
-    height: 7px;
+    left: -3px;
+    top: 0.95em;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background: #D4A9A5;
-}
-
-.news-item:last-child {
-    border-bottom: none;
+    border: 2px solid #ffffff;
 }
 
 .news-item strong {
-    color: #B07BA5;
-    font-weight: 600;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: #8E5C89;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding-top: 0.1em;
 }
 
 /* Star Button */
@@ -740,6 +763,15 @@ a:hover {
     
     .news-content {
         max-height: 100px;
+    }
+
+    .news-item {
+        display: block;
+    }
+
+    .news-item strong {
+        display: block;
+        margin-bottom: 0.1rem;
     }
 }
 
@@ -1382,7 +1414,30 @@ body.dark-mode .experience-item {
 }
 
 body.dark-mode .news-item {
-    border-bottom-color: rgba(166, 117, 161, 0.12);
+    color: #d0c8cf;
+}
+
+body.dark-mode .news-item::before {
+    background: #E3B7B1;
+    border-color: #242440;
+}
+
+body.dark-mode .news-item strong {
+    color: #CFA0C8;
+}
+
+body.dark-mode .news-content::before {
+    background: rgba(166, 117, 161, 0.25);
+}
+
+body.dark-mode .news-toggle {
+    color: #CFA0C8;
+    border-color: rgba(206, 162, 172, 0.3);
+}
+
+body.dark-mode .news-toggle:hover {
+    background: rgba(198, 146, 190, 0.1);
+    border-color: #C692BE;
 }
 
 body.dark-mode .header-profile-picture {
