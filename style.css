@@ -384,10 +384,22 @@ a:hover {
 }
 
 .news-item {
-    padding: 0.4rem 0;
+    position: relative;
+    padding: 0.4rem 0 0.4rem 1.1rem;
     border-bottom: 1px solid rgba(166, 117, 161, 0.1);
     font-size: 0.9rem;
     line-height: 1.5;
+}
+
+.news-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 1em;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #D4A9A5;
 }
 
 .news-item:last-child {
