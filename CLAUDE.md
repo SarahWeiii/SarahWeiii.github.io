@@ -26,4 +26,5 @@ python3 -m http.server 8000
 
 - Publications are added as HTML blocks in the publications section of `index.html`, each with a thumbnail, metadata, and action buttons (paper/code/bibtex links).
 - The News section uses a CSS class `.expanded` toggled by inline JavaScript to show/hide older items.
+- The theme toggle cycles auto → light → dark. `localStorage['theme']` holds `'light'`/`'dark'`; absent means auto (follow system, the default). A tiny script right after `<body>` pre-applies `body.dark-mode` to avoid a flash; the cycle logic lives in the inline script at the end of `index.html`.
 - All content changes happen directly in `index.html` — there are no templates or partials.
