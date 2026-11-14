@@ -1,0 +1,8 @@
+@inproceedings{shi2026cuacd,
+  title={CuACD: A Fully GPU-Resident Approximate Convex Decomposition},
+  author={Shi, Ruoxi and Wei, Xinyue and Xiang, Fanbo and Xu, Zexiang and Su, Hao},
+  booktitle={SIGGRAPH Asia 2026 Conference Papers},
+  year={2026},
+  publisher={ACM},
+  doi={10.1145/3829340.3842217}
+}
