@@ -1,73 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="night">
 <head>
+    <meta charset="utf-8">
     <title>Xinyue Wei</title>
     <meta name="author" content="Xinyue Wei">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Xinyue Wei">
-    <meta property="og:description" content="Research Scientist @ Hillbot Inc. | PhD @ UC San Diego">
-    <meta property="og:image" content="files/me.jpeg">
+    <meta property="og:description" content="Research Scientist @ Sudo AI | Ph.D. @ UC San Diego">
+    <meta property="og:image" content="https://sarahweiii.github.io/files/me.jpeg">
     <meta property="og:url" content="https://SarahWeiii.github.io/">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="apple-touch-icon" href="files/ucsd-logo.png">
-    <link rel="icon" type="image/png" href="files/ucsd-logo.png">
-    <link rel="manifest" href="files/site.webmanifest">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" href="favicon.ico" sizes="32x32">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="style.css">
-    <script src="githubStarCount.js"></script>
+    <script>
+        // The look: "night" or "california" (day). It follows the visitor's system
+        // setting unless they pick one with the switch in the top bar. The choice is
+        // kept under the same name as on the photo gallery, so the two sites agree.
+        // This runs before the first paint, so the page never flashes the wrong look.
+        (() => {
+            const root = document.documentElement;
+            const dark = matchMedia('(prefers-color-scheme: dark)');
+            const system = () => (dark.matches ? 'night' : 'california');
+            const chosen = () => {
+                try {
+                    return localStorage.getItem('look');
+                } catch {
+                    return null;
+                }
+            };
+            const label = () => {
+                const btn = document.querySelector('.look-switch');
+                if (btn) btn.setAttribute('aria-label', root.dataset.theme === 'night' ? 'Switch to the day look' : 'Switch to the night look');
+            };
+            const show = (look, animate) => {
+                const run = () => {
+                    root.dataset.theme = look;
+                    label();
+                };
+                if (animate && document.startViewTransition) document.startViewTransition(run);
+                else run();
+            };
+            show(chosen() || system());
+            document.addEventListener('DOMContentLoaded', label);
+
+            // The system setting changed: follow it, unless the visitor chose.
+            dark.addEventListener('change', () => {
+                if (!chosen()) show(system(), true);
+            });
+            // The switch: a choice that matches the system setting is not stored,
+            // so the site goes back to following the system.
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.look-switch')) return;
+                const next = root.dataset.theme === 'night' ? 'california' : 'night';
+                try {
+                    if (next === system()) localStorage.removeItem('look');
+                    else localStorage.setItem('look', next);
+                } catch {}
+                show(next, true);
+            });
+        })();
+    </script>
 </head>
 <body>
-    <script>(function(){var t=localStorage.getItem('theme');if(t==='dark'||(t!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches))document.body.classList.add('dark-mode');})();</script>
-    <header class="header">
-        <div class="content">
-            <div class="row">
-                <div class="header-profile-picture"></div>
-                <div class="header-text">
-                    <div class="header-name">
-                        <h1>Xinyue Wei</h1>
-                    </div>
-                    <div class="header-subtitle">
-                        Research Scientist @ Hillbot Inc.
-                        <br>
-                        PhD @ UC San Diego
-                    </div>
-                    <div class="header-email">
-                        sarahwei0210 [at] gmail [dot] com
-                    </div>
-                    <div class="header-links">
-                        <a href="https://scholar.google.com/citations?user=UipTKqoAAAAJ&hl=zh-CN"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/></svg> Scholar</a>
-                        <a href="https://github.com/SarahWeiii"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
-                        <a href="https://twitter.com/SarahWeii"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> Twitter</a>
-                        <a href="https://www.linkedin.com/in/xinyue-wei-852b2317b/"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a>
-                        <a href="files/cv.pdf"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg> CV</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <nav class="navigation">
-        <div class="nav-content">
-            <a href="#about" class="nav-link">About</a>
+    <header class="nav">
+        <a class="brand" href="#top">Xinyue Wei</a>
+        <nav>
             <a href="#news" class="nav-link">News</a>
             <a href="#publications" class="nav-link">Publications</a>
             <a href="#experience" class="nav-link">Experience</a>
-            <a href="#services" class="nav-link">Services</a>
-            <a href="#misc" class="nav-link">Misc</a>
-            <button class="dark-mode-toggle" id="dark-mode-toggle" title="Toggle dark mode">&#9790;</button>
-            <div class="nav-indicator" id="nav-indicator"></div>
+            <!-- Hidden until the photo gallery is online; take this comment away to show the link:
+            <a href="/photo_gallery/" class="to-photos">Photos <span aria-hidden="true">&#8599;</span></a>
+            -->
+            <button class="look-switch" type="button" title="Day / night">
+                <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.6"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.3 5.3 7 7M17 17l1.7 1.7M18.7 5.3 17 7M7 17l-1.7 1.7"/></svg>
+                <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.5 14.2A7.8 7.8 0 0 1 9.8 4.5a7.8 7.8 0 1 0 9.7 9.7z"/></svg>
+            </button>
+        </nav>
+    </header>
+
+    <div class="page" id="top">
+        <div class="hero" id="about">
+            <img class="hero-photo" src="files/me-400.webp" alt="Xinyue Wei" width="400" height="400">
+            <div class="hero-text">
+                <h1>Xinyue Wei</h1>
+                <p class="hero-role">Research Scientist @ Sudo AI <span>&middot;</span> Ph.D. @ UC San Diego</p>
+                <p class="hero-bio">
+                    I am a research scientist and tech lead at <a href="https://www.sudo.ai/">Sudo AI</a>. I obtained my Ph.D. degree in ECE at <a href="https://ucsd.edu/">UC San Diego</a> in 2025, advised by Prof. <a href="https://cseweb.ucsd.edu/~haosu/">Hao Su</a>. Before that, I received my B.E. degree in computer science and technology from Tongji University in 2020. My research interests are in Computer Graphics, Computer Vision, and Embodied AI.
+                </p>
+                <div class="hero-links">
+                    <span class="hero-email">sarahwei0210 [at] gmail [dot] com</span>
+                    <a href="https://scholar.google.com/citations?user=UipTKqoAAAAJ&hl=zh-CN"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/></svg> Scholar</a>
+                    <a href="https://github.com/SarahWeiii"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
+                    <a href="https://twitter.com/SarahWeii"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> Twitter</a>
+                    <a href="https://www.linkedin.com/in/xinyue-wei-852b2317b/"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a>
+                    <a href="files/cv.pdf"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg> CV</a>
+                </div>
+            </div>
         </div>
-    </nav>
+        <!-- a row of small lights in the night look, a row of plain dots in the day look -->
+        <div class="bulb-row"><span class="bulbs" aria-hidden="true"></span></div>
 
     <main class="content">
-        <section id="about" class="about-section">
-            <div class="about-block">
-                <h2>About</h2>
-                <p>
-                    I am a research scientist and tech lead at <a href="https://www.hillbot.ai/">Hillbot Inc.</a> I obtained my Ph.D. degree in ECE at <a href="https://ucsd.edu/">UC San Diego</a> in 2025, advised by Prof. <a href="https://cseweb.ucsd.edu/~haosu/">Hao Su</a>. Before that, I received my B.E. degree in computer science and technology from Tongji University in 2020. My research interests are in Computer Graphics, Computer Vision and Embodied AI.
-                </p>
-            </div>
-        </section>
-
         <section id="news" class="news-section">
             <div class="news-header" onclick="toggleNews()">
                 <h2>News</h2>
@@ -103,19 +138,19 @@
 
         <section id="publications" class="publications-section">
             <div class="section-card">
-                <h2>Publications and preprints</h2>
+                <h2>Selected publications</h2>
                 <div class="section-content">
 
             <article class="publication">
                 <div class="row">
-                    <div class="row-media" style="background-image: url(files/cuacd.jpg);"></div>
+                    <div class="row-media" style="background-image: url(files/cuacd.webp);"></div>
                     <div class="row-text">
                         <a class="publication-title" href="https://arxiv.org/abs/2609.28731">CuACD: A Fully GPU-Resident Approximate Convex Decomposition</a>
                         <div class="publication-authors">Ruoxi Shi, <span class="bold">Xinyue Wei</span>, Fanbo Xiang, Zexiang Xu, Hao Su</div>
-                        <div class="publication-venue"><span class="italic" style="color:#C4956A">SIGGRAPH Asia 2026 (Conference Track)</span></div>
+                        <div class="publication-venue"><span class="italic">SIGGRAPH Asia 2026 (Conference Track)</span></div>
                         <div class="publication-links">
                             <a class="btn btn-red" href="https://arxiv.org/abs/2609.28731">PDF</a>
-                            <a class="btn btn-dark" href="https://github.com/eliphatfs/cuacd">Code <span class="github-stars" data-repo="eliphatfs/cuacd"></span></a>
+                            <a class="btn btn-dark" href="https://github.com/eliphatfs/cuacd">Code <span class="github-stars" data-repo="eliphatfs/cuacd">&#9733; 69</span></a>
                             <a class="btn btn-dark" href="bibtex/shi2026cuacd.txt">Bibtex</a>
                         </div>
                     </div>
@@ -124,11 +159,11 @@
 
             <article class="publication">
                 <div class="row">
-                    <div class="row-media" style="background-image: url(files/freeart3d.png);"></div>
+                    <div class="row-media" style="background-image: url(files/freeart3d.webp);"></div>
                     <div class="row-text">
                         <a class="publication-title" href="https://czzzzh.github.io/FreeArt3D/FreeArt3D.pdf">FreeArt3D: Training-Free Articulated Object Generation using 3D Diffusion</a>
                         <div class="publication-authors">Chuhao Chen, Isabella Liu, <span class="bold">Xinyue Wei</span>, Hao Su, Minghua Liu</div>
-                        <div class="publication-venue"><span class="italic" style="color:#C4956A">SIGGRAPH Asia 2025 (Conference Track)</span></div>
+                        <div class="publication-venue"><span class="italic">SIGGRAPH Asia 2025 (Conference Track)</span></div>
                         <div class="publication-links">
                             <a class="btn btn-red" href="https://czzzzh.github.io/FreeArt3D/FreeArt3D.pdf">PDF</a>
                             <a class="btn btn-dark" href="https://github.com/CzzzzH/FreeArt3D">Code</a>
@@ -142,11 +177,11 @@
 
             <article class="publication">
                 <div class="row">
-                    <div class="row-media" style="background-image: url(files/larm.png);"></div>
+                    <div class="row-media" style="background-image: url(files/larm.webp);"></div>
                     <div class="row-text">
                         <a class="publication-title" href="https://www.arxiv.org/abs/2511.11563">LARM: A Large Articulated Object Reconstruction Model</a>
                         <div class="publication-authors">Sylvia Yuan, Ruoxi Shi, <span class="bold">Xinyue Wei</span>, Xiaoshuai Zhang, Hao Su, Minghua Liu</div>
-                        <div class="publication-venue"><span class="italic" style="color:#C4956A">SIGGRAPH Asia 2025 (Conference Track)</span></div>
+                        <div class="publication-venue"><span class="italic">SIGGRAPH Asia 2025 (Conference Track)</span></div>
                         <div class="publication-links">
                             <a class="btn btn-red" href="https://www.arxiv.org/abs/2511.11563">PDF</a>
                             <a class="btn btn-dark" href="https://github.com/sylviayuan-sy/LARM">Code</a>
@@ -159,11 +194,11 @@
 
             <article class="publication">
                 <div class="row">
-                    <div class="row-media" style="background-image: url(files/partuv.png);"></div>
+                    <div class="row-media" style="background-image: url(files/partuv.webp);"></div>
                     <div class="row-text">
                         <a class="publication-title" href="https://arxiv.org/abs/2511.16659">PartUV: Part-Based UV Unwrapping of 3D Meshes</a>
                         <div class="publication-authors">Zhaoning Wang, <span class="bold">Xinyue Wei</span>, Ruoxi Shi, Xiaoshuai Zhang, Hao Su, Minghua Liu</div>
-                        <div class="publication-venue"><span class="italic" style="color:#C4956A">SIGGRAPH Asia 2025 (Conference Track)</span></div>
+                        <div class="publication-venue"><span class="italic">SIGGRAPH Asia 2025 (Conference Track)</span></div>
                         <div class="publication-links">
                             <a class="btn btn-red" href="https://arxiv.org/abs/2511.16659">PDF</a>
                             <a class="btn btn-dark" href="https://github.com/EricWang12/PartUV">Code</a>
@@ -176,14 +211,14 @@
 
             <article class="publication">
                 <div class="row">
-                    <div class="row-media" style="background-image: url(files/pamo.png);"></div>
+                    <div class="row-media" style="background-image: url(files/pamo.webp);"></div>
                     <div class="row-text">
                         <a class="publication-title" href="https://arxiv.org/abs/2509.05595">PaMO: Parallel Mesh Optimization for Intersection-Free Low-Poly Modeling on the GPU</a>
                         <div class="publication-authors">Seonghun Oh*, Xiaodi Yuan*, <span class="bold">Xinyue Wei*</span>, Ruoxi Shi, Fanbo Xiang, Minghua Liu, Hao Su</div>
-                        <div class="publication-venue"><span class="italic" style="color:#C4956A">Pacific Graphics 2025 (Journal Track)</span></div>
+                        <div class="publication-venue"><span class="italic">Pacific Graphics 2025 (Journal Track)</span></div>
                         <div class="publication-links">
                             <a class="btn btn-red" href="https://arxiv.org/abs/2509.05595">PDF</a>
-                            <a class="btn btn-dark" href="https://github.com/SarahWeiii/pamo">Code <span class="github-stars" data-repo="SarahWeiii/pamo"></span></a>
+                            <a class="btn btn-dark" href="https://github.com/SarahWeiii/pamo">Code <span class="github-stars" data-repo="SarahWeiii/pamo">&#9733; 248</span></a>
                             <a class="btn btn-dark" href="https://seonghunn.github.io/pamo/">Project</a>
                             <a class="btn btn-dark" href="bibtex/oh2025pamo.txt">Bibtex</a>
                         </div>
@@ -193,11 +228,11 @@
             
             <article class="publication">
                 <div class="row">
-                    <div class="row-media" style="background-image: url(files/cosmos.png);"></div>
+                    <div class="row-media" style="background-image: url(files/cosmos.webp);"></div>
                     <div class="row-text">
                         <a class="publication-title" href="https://arxiv.org/abs/2501.03575">Cosmos: World Foundation Model Platform for Physical AI</a>
                         <div class="publication-authors">Core Contributor (77 authors)</div>
-                        <div class="publication-venue"><span class="italic" style="color:#C4956A">White Paper</span></div>
+                        <div class="publication-venue"><span class="italic">White Paper</span></div>
                         <div class="publication-links">
                             <a class="btn btn-red" href="https://arxiv.org/abs/2501.03575">PDF</a>
                             <a class="btn btn-dark" href="https://build.nvidia.com/explore/discover">Product</a>
@@ -210,11 +245,11 @@
 
             <article class="publication">
                 <div class="row">
-                    <div class="row-media" style="background-image: url(files/meshformer.png);"></div>
+                    <div class="row-media" style="background-image: url(files/meshformer.webp);"></div>
                     <div class="row-text">
                         <a class="publication-title" href="https://arxiv.org/abs/2408.10198">MeshFormer: High-Quality Mesh Generation with 3D-Guided Reconstruction Model</a>
                         <div class="publication-authors">Minghua Liu*, Chong Zeng*, <span class="bold">Xinyue Wei</span>, Ruoxi Shi, Linghao Chen, Chao Xu, Mengqi Zhang, Zhaoning Wang, Xiaoshuai Zhang, Isabella Liu, Hongzhi Wu, Hao Su</div>
-                        <div class="publication-venue"><span class="italic" style="color:#C4956A">NeurIPS 2024 (Oral)</span></div>
+                        <div class="publication-venue"><span class="italic">NeurIPS 2024</span> <span class="award">Oral</span></div>
                         <div class="publication-links">
                             <a class="btn btn-red" href="https://arxiv.org/abs/2408.10198">PDF</a>
                             <a class="btn btn-dark" href="https://huggingface.co/spaces/sudo-ai/MeshFormer">Demo</a>
@@ -227,11 +262,11 @@
 
             <article class="publication">
                 <div class="row">
-                    <div class="row-media" style="background-image: url(files/meshlrm.png);"></div>
+                    <div class="row-media" style="background-image: url(files/meshlrm.webp);"></div>
                     <div class="row-text">
                         <a class="publication-title" href="https://arxiv.org/abs/2404.12385">MeshLRM: Large Reconstruction Model for High-Quality Meshes</a>
                         <div class="publication-authors"><span class="bold">Xinyue Wei*</span>, Kai Zhang*, Sai Bi, Hao Tan, Fujun Luan, Valentin Deschaintre, Kalyan Sunkavalli, Hao Su, Zexiang Xu</div>
-                        <div class="publication-venue"><span class="italic" style="color:#C4956A">Technical Report</span></div>
+                        <div class="publication-venue"><span class="italic">Technical Report</span></div>
                         <div class="publication-links">
                             <a class="btn btn-red" href="https://arxiv.org/abs/2404.12385">PDF</a>
                             <a class="btn btn-dark" href="https://huggingface.co/spaces/sudo-ai/MeshLRM">Demo</a>
@@ -244,14 +279,14 @@
 
             <article class="publication">
                 <div class="row">
-                    <div class="row-media" style="background-image: url(files/zerorf.png);"></div>
+                    <div class="row-media" style="background-image: url(files/zerorf.webp);"></div>
                     <div class="row-text">
                         <a class="publication-title" href="https://arxiv.org/abs/2312.09249">ZeroRF: Fast Sparse View 360° Reconstruction with Zero Pretraining</a>
                         <div class="publication-authors">Ruoxi Shi*, <span class="bold">Xinyue Wei*</span>, Cheng Wang, Hao Su</div>
-                        <div class="publication-venue"><span class="italic" style="color:#C4956A">CVPR 2024</span></div>
+                        <div class="publication-venue"><span class="italic">CVPR 2024</span></div>
                         <div class="publication-links">
                             <a class="btn btn-red" href="https://arxiv.org/abs/2312.09249">PDF</a>
-                            <a class="btn btn-dark" href="https://github.com/eliphatfs/zerorf">Code <span class="github-stars" data-repo="eliphatfs/zerorf"></span></a>
+                            <a class="btn btn-dark" href="https://github.com/eliphatfs/zerorf">Code</a>
                             <a class="btn btn-dark" href="https://sarahweiii.github.io/zerorf/">Project</a>
                             <a class="btn btn-dark" href="bibtex/shi2023zerorf.txt">Bibtex</a>
                         </div>
@@ -261,11 +296,11 @@
 
             <article class="publication">
                 <div class="row">
-                    <div class="row-media" style="background-image: url(files/12345pp.gif);"></div>
+                    <video class="row-media" src="files/12345pp.mp4" autoplay loop muted playsinline></video>
                     <div class="row-text">
                         <a class="publication-title" href="https://arxiv.org/abs/2311.07885">One-2-3-45++: Fast Single Image to 3D Objects with Consistent Multi-View Generation and 3D Diffusion</a>
                         <div class="publication-authors">Minghua Liu*, Ruoxi Shi*, Linghao Chen*, Zhuoyang Zhang*, Chao Xu*, <span class="bold">Xinyue Wei</span>, Hansheng Chen, Chong Zeng, Jiayuan Gu, Hao Su</div>
-                        <div class="publication-venue"><span class="italic" style="color:#C4956A">CVPR 2024</span></div>
+                        <div class="publication-venue"><span class="italic">CVPR 2024</span></div>
                         <div class="publication-links">
                             <a class="btn btn-red" href="https://arxiv.org/abs/2311.07885">PDF</a>
                             <a class="btn btn-dark" href="https://www.sudo.ai/3dgen">Demo</a>
@@ -278,14 +313,14 @@
 
             <article class="publication">
                 <div class="row">
-                    <div class="row-media" style="background-image: url(files/0123pp.jpeg);"></div>
+                    <div class="row-media" style="background-image: url(files/0123pp.webp);"></div>
                     <div class="row-text">
                         <a class="publication-title" href="https://arxiv.org/abs/2310.15110">Zero123++: A Single Image to Consistent Multi-view Diffusion Base Model</a>
                         <div class="publication-authors">Ruoxi Shi, Hansheng Chen, Zhuoyang Zhang, Minghua Liu, Chao Xu, <span class="bold">Xinyue Wei</span>, Linghao Chen, Chong Zeng, Hao Su</div>
-                        <div class="publication-venue"><span class="italic" style="color:#C4956A">Technical Report</span></div>
+                        <div class="publication-venue"><span class="italic">Technical Report</span></div>
                         <div class="publication-links">
                             <a class="btn btn-red" href="https://arxiv.org/abs/2310.15110">PDF</a>
-                            <a class="btn btn-dark" href="https://github.com/SUDO-AI-3D/zero123plus">Code <span class="github-stars" data-repo="SUDO-AI-3D/zero123plus"></span></a>
+                            <a class="btn btn-dark" href="https://github.com/SUDO-AI-3D/zero123plus">Code <span class="github-stars" data-repo="SUDO-AI-3D/zero123plus">&#9733; 2.1k</span></a>
                             <a class="btn btn-dark" href="https://huggingface.co/spaces/sudo-ai/zero123plus-demo-space">Demo</a>
                             <a class="btn btn-dark" href="bibtex/shi2023zero123.txt">Bibtex</a>
                         </div>
@@ -295,14 +330,14 @@
 
             <article class="publication">
                 <div class="row">
-                    <div class="row-media" style="background-image: url(files/neum.gif);"></div>
+                    <video class="row-media" src="files/neum.mp4" autoplay loop muted playsinline></video>
                     <div class="row-text">
                         <a class="publication-title" href="https://arxiv.org/abs/2305.17134">NeuManifold: Neural Watertight Manifold Reconstruction with Efficient and High-Quality Rendering Support</a>
                         <div class="publication-authors"><span class="bold">Xinyue Wei</span>, Fanbo Xiang, Sai Bi, Anpei Chen, Kalyan Sunkavalli, Zexiang Xu*, Hao Su*</div>
-                        <div class="publication-venue"><span class="italic" style="color:#C4956A">WACV 2025 (Oral)</span></div>
+                        <div class="publication-venue"><span class="italic">WACV 2025</span> <span class="award">Oral</span></div>
                         <div class="publication-links">
                             <a class="btn btn-red" href="https://arxiv.org/abs/2305.17134">PDF</a>
-                            <a class="btn btn-dark" href="https://github.com/SarahWeiii/diso">Code <span class="github-stars" data-repo="SarahWeiii/diso"></span></a>
+                            <a class="btn btn-dark" href="https://github.com/SarahWeiii/diso">Code <span class="github-stars" data-repo="SarahWeiii/diso">&#9733; 337</span></a>
                             <a class="btn btn-dark" href="https://sarahweiii.github.io/neumanifold/">Project</a>
                             <a class="btn btn-dark" href="bibtex/wei2023neumanifold.txt">Bibtex</a>
                         </div>
@@ -312,14 +347,14 @@
 
             <article class="publication">
                 <div class="row">
-                    <div class="row-media" style="background-image: url(files/dif.gif);"></div>
+                    <video class="row-media" src="files/dif.mp4" autoplay loop muted playsinline></video>
                     <div class="row-text">
                         <a class="publication-title" href="https://arxiv.org/abs/2302.01226">Dictionary Fields: Learning a Neural Basis Decomposition</a>
                         <div class="publication-authors">Anpei Chen, Zexiang Xu, <span class="bold">Xinyue Wei</span>, Siyu Tang, Hao Su, Andreas Geiger</div>
-                        <div class="publication-venue"><span class="italic" style="color:#C4956A">SIGGRAPH 2023 (Journal Track)</span></div>
+                        <div class="publication-venue"><span class="italic">SIGGRAPH 2023 (Journal Track)</span></div>
                         <div class="publication-links">
                             <a class="btn btn-red" href="https://arxiv.org/abs/2302.01226">PDF</a>
-                            <a class="btn btn-dark" href="https://github.com/autonomousvision/factor-fields">Code <span class="github-stars" data-repo="autonomousvision/factor-fields"></span></a>
+                            <a class="btn btn-dark" href="https://github.com/autonomousvision/factor-fields">Code</a>
                             <a class="btn btn-dark" href="https://apchenstu.github.io/FactorFields/">Project</a>
                             <a class="btn btn-dark" href="bibtex/chen2023dictionary.txt">Bibtex</a>
                         </div>
@@ -329,14 +364,14 @@
 
             <article class="publication">
                 <div class="row">
-                    <div class="row-media" style="background-image: url(files/maniskill2.png);"></div>
+                    <div class="row-media" style="background-image: url(files/maniskill2.webp);"></div>
                     <div class="row-text">
                         <a class="publication-title" href="https://arxiv.org/abs/2302.04659">ManiSkill2: A Unified Benchmark for Generalizable Manipulation Skills</a>
                         <div class="publication-authors">Jiayuan Gu*, Fanbo Xiang*, Xuanlin Li+, Zhan Ling+, Xiqiang Liu+, Tongzhou Mu+, Yihe Tang+, Stone Tao+, <span class="bold">Xinyue Wei+</span>, Yunchao Yao+, Xiaodi Yuan, Pengwei Xie, Zhiao Huang, Rui Chen, Hao Su</div>
-                        <div class="publication-venue"><span class="italic" style="color:#C4956A">ICLR 2023</span></div>
+                        <div class="publication-venue"><span class="italic">ICLR 2023</span></div>
                         <div class="publication-links">
                             <a class="btn btn-red" href="https://arxiv.org/abs/2302.04659">PDF</a>
-                            <a class="btn btn-dark" href="https://github.com/haosulab/ManiSkill">Code <span class="github-stars" data-repo="haosulab/ManiSkill"></span></a>
+                            <a class="btn btn-dark" href="https://github.com/haosulab/ManiSkill">Code</a>
                             <a class="btn btn-dark" href="https://maniskill2.github.io/">Project</a>
                             <a class="btn btn-dark" href="bibtex/gu2023maniskill2.txt">Bibtex</a>
                         </div>
@@ -346,14 +381,14 @@
 
             <article class="publication">
                 <div class="row">
-                    <div class="row-media" style="background-image: url(files/coacd.jpg);"></div>
+                    <div class="row-media" style="background-image: url(files/coacd.webp);"></div>
                     <div class="row-text">
                         <a class="publication-title" href="https://arxiv.org/abs/2205.02961">Approximate Convex Decomposition for 3D Meshes with Collision-Aware Concavity and Tree Search</a>
                         <div class="publication-authors"><span class="bold">Xinyue Wei*</span>, Minghua Liu*, Zhan Ling, Hao Su</div>
-                        <div class="publication-venue"><span class="italic" style="color:#C4956A">SIGGRAPH 2022 (Journal track)</span></div>
+                        <div class="publication-venue"><span class="italic">SIGGRAPH 2022 (Journal Track)</span></div>
                         <div class="publication-links">
                             <a class="btn btn-red" href="https://arxiv.org/abs/2205.02961">PDF</a>
-                            <a class="btn btn-dark" href="https://github.com/SarahWeiii/CoACD">Code <span class="github-stars" data-repo="SarahWeiii/CoACD"></span></a>
+                            <a class="btn btn-dark" href="https://github.com/SarahWeiii/CoACD">Code <span class="github-stars" data-repo="SarahWeiii/CoACD">&#9733; 1.2k</span></a>
                             <a class="btn btn-dark" href="https://colin97.github.io/CoACD">Project</a>
                             <a class="btn btn-dark" href="bibtex/wei2022approximate.txt">Bibtex</a>
                         </div>
@@ -363,11 +398,11 @@
 
             <article class="publication">
                 <div class="row">
-                    <div class="row-media" style="background-image: url(files/dsr.jpg);"></div>
+                    <div class="row-media" style="background-image: url(files/dsr.webp);"></div>
                     <div class="row-text">
                         <a class="publication-title" href="https://arxiv.org/abs/2108.06915">End-to-End Adaptive Monte Carlo Denoising and Super-Resolution</a>
                         <div class="publication-authors"><span class="bold">Xinyue Wei</span>, Haozhi Huang, Yujin Shi, Hongliang Yuan, Li Shen, Jue Wang</div>
-                        <div class="publication-venue"><span class="italic" style="color:#C4956A">Arxiv 2021</span></div>
+                        <div class="publication-venue"><span class="italic">arXiv 2021</span></div>
                         <div class="publication-links">
                             <a class="btn btn-red" href="https://arxiv.org/abs/2108.06915">PDF</a>
                             <a class="btn btn-dark" href="bibtex/wei2021end.txt">Bibtex</a>
@@ -379,83 +414,107 @@
             </div>
         </section>
 
-        <div class="section-divider">
-            <svg viewBox="0 0 1200 40" preserveAspectRatio="none">
-                <path d="M0,20 Q300,40 600,20 Q900,0 1200,20 L1200,40 L0,40 Z"/>
-            </svg>
-        </div>
 
         <section id="experience" class="experience-section">
             <div class="section-card">
-                <h2>Experience</h2>
+                <h2>Work experience</h2>
                 <div class="section-content">
                     <div class="experience-item">
+                        <div class="experience-when">06/2025 &ndash; Present</div>
                         <div class="experience-logo" style="background-image: url(files/hillbot-logo.png);"></div>
                         <div class="experience-content">
-                            <strong>Research Scientist</strong> at <a href="https://www.hillbot.ai/">Hillbot (sudoAI)</a>, June 2025 - Present
+                            <a class="experience-company" href="https://www.sudo.ai/">Hillbot (Sudo AI)</a>
+                            <div class="experience-role">
+                                Research Scientist
+                                <div class="experience-detail">Foundation models</div>
+                            </div>
                         </div>
                     </div>
                     <div class="experience-item">
+                        <div class="experience-when">01/2025 &ndash; 06/2025</div>
                         <div class="experience-logo" style="background-image: url(files/hillbot-logo.png);"></div>
                         <div class="experience-content">
-                            <strong>Research Intern</strong> at <a href="https://www.hillbot.ai/">Hillbot (sudoAI)</a>, Jan 2025 - June 2025
+                            <a class="experience-company" href="https://www.sudo.ai/">Hillbot (Sudo AI)</a>
+                            <div class="experience-role">
+                                Research Intern
+                                <div class="experience-detail">Foundation models</div>
+                            </div>
                         </div>
                     </div>
                     <div class="experience-item">
+                        <div class="experience-when">10/2024 &ndash; 01/2025</div>
                         <div class="experience-logo" style="background-image: url(files/nvidia-logo.png);"></div>
                         <div class="experience-content">
-                            <strong>Research Intern</strong> at <a href="https://research.nvidia.com/home">NVIDIA</a>, Oct 2024 - Jan 2025
-                            <div class="experience-detail">World foundation models</div>
+                            <a class="experience-company" href="https://research.nvidia.com/home">NVIDIA</a>
+                            <div class="experience-role">
+                                Research Intern
+                                <div class="experience-detail">World foundation models</div>
+                            </div>
                         </div>
                     </div>
                     <div class="experience-item">
+                        <div class="experience-when">03/2024 &ndash; 10/2024</div>
                         <div class="experience-logo" style="background-image: url(files/hillbot-logo.png);"></div>
                         <div class="experience-content">
-                            <strong>Research Intern</strong> at <a href="https://www.hillbot.ai/">Hillbot (sudoAI)</a>, Mar 2024 - Oct 2024
-                            <div class="experience-detail">3D mesh generation</div>
+                            <a class="experience-company" href="https://www.sudo.ai/">Hillbot (Sudo AI)</a>
+                            <div class="experience-role">
+                                Research Intern
+                                <div class="experience-detail">3D mesh generation</div>
+                            </div>
                         </div>
                     </div>
                     <div class="experience-item">
+                        <div class="experience-when">10/2023 &ndash; 03/2024</div>
                         <div class="experience-logo" style="background-image: url(files/adobe-logo.png);"></div>
                         <div class="experience-content">
-                            <strong>Research Intern</strong> at <a href="https://research.adobe.com/">Adobe</a>, Oct 2023 - Mar 2024
-                            <div class="experience-detail">3D reconstruction</div>
+                            <a class="experience-company" href="https://research.adobe.com/">Adobe</a>
+                            <div class="experience-role">
+                                Research Intern
+                                <div class="experience-detail">3D reconstruction</div>
+                            </div>
                         </div>
                     </div>
                     <div class="experience-item">
+                        <div class="experience-when">06/2022 &ndash; 03/2023</div>
                         <div class="experience-logo" style="background-image: url(files/adobe-logo.png);"></div>
                         <div class="experience-content">
-                            <strong>Research Intern, GILL Group</strong> at <a href="https://research.adobe.com/">Adobe</a>, Jun 2022 - Mar 2023
-                            <div class="experience-detail">Neural surface reconstruction</div>
+                            <a class="experience-company" href="https://research.adobe.com/">Adobe</a>
+                            <div class="experience-role">
+                                Research Intern, GILL Group
+                                <div class="experience-detail">Neural surface reconstruction</div>
+                            </div>
                         </div>
                     </div>
                     <div class="experience-item">
+                        <div class="experience-when">03/2020 &ndash; 02/2021</div>
                         <div class="experience-logo" style="background-image: url(files/tencent-logo.jpeg);"></div>
                         <div class="experience-content">
-                            <strong>Research Intern, AI Graphics Group</strong> at <a href="https://ai.tencent.com/ailab/zh/index">Tencent AI Lab</a>, Mar 2020 - Feb 2021
-                            <div class="experience-detail">Monte Carlo denoising</div>
+                            <a class="experience-company" href="https://ai.tencent.com/ailab/zh/index">Tencent AI Lab</a>
+                            <div class="experience-role">
+                                Research Intern, AI Graphics Group
+                                <div class="experience-detail">Monte Carlo denoising</div>
+                            </div>
                         </div>
                     </div>
                     <div class="experience-item">
+                        <div class="experience-when">07/2019 &ndash; 10/2019</div>
                         <div class="experience-logo" style="background-image: url(files/jhu-logo.jpeg);"></div>
                         <div class="experience-content">
-                            <strong>Research Intern, CCVL Lab</strong> at <a href="https://www.jhu.edu/">Johns Hopkins University</a>, Jul 2019 - Oct 2019
-                            <div class="experience-detail">Computer vision</div>
+                            <a class="experience-company" href="https://www.jhu.edu/">Johns Hopkins University</a>
+                            <div class="experience-role">
+                                Research Intern, CCVL Lab
+                                <div class="experience-detail">Computer vision</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <div class="section-divider">
-            <svg viewBox="0 0 1200 40" preserveAspectRatio="none">
-                <path d="M0,20 Q300,0 600,20 Q900,40 1200,20 L1200,40 L0,40 Z"/>
-            </svg>
-        </div>
 
         <section id="services" class="services-section">
             <div class="section-card">
-                <h2>Services</h2>
+                <h2>Academic service</h2>
                 <div class="section-content">
                     <p>Reviewer for SIGGRAPH '22 '25, SIGGRAPH Asia '23 '25, CVPR '22 '23 '24 '25, ECCV '22 '24, ICCV '23 '25, 3DV '23, ICRA '23 '24, WACV '25, IEEE CGA</p>
                 </div>
@@ -466,175 +525,147 @@
             <div class="section-card">
                 <h2>Misc.</h2>
                 <div class="section-content">
-                    <p>I like <a href="https://www.instagram.com/sarahwei_photos/">photography</a>, cooking, singing, piano, and acrylic marker painting.</p>
+                    <p>I like <a href="https://www.instagram.com/sarahwei_photos/">photography</a>, cooking, singing, and traveling.</p>
                 </div>
             </div>
         </section>
     </main>
+    </div>
 
     <button class="back-to-top" id="back-to-top" title="Back to top">&#8593;</button>
 
     <div class="lightbox" id="lightbox" onclick="closeLightbox()">
         <img id="lightbox-img" src="" alt="">
+        <video id="lightbox-video" loop muted playsinline hidden></video>
     </div>
 
     <footer class="footer">
         <div class="footer-content">
-            &copy; 2025 Xinyue Wei
+            &copy; <span id="year">2026</span> Xinyue Wei <span id="updated"></span>
         </div>
     </footer>
 
     <script>
-        // News expand/collapse functionality
+        // News: a few lines are shown; "Expand" shows the rest.
         function toggleNews() {
             const content = document.getElementById('news-content');
             const toggle = document.getElementById('news-toggle');
-            if (content.classList.contains('expanded')) {
-                content.classList.remove('expanded');
-                toggle.textContent = 'Expand';
-            } else {
-                content.classList.add('expanded');
-                toggle.textContent = 'Collapse';
-            }
+            const open = content.classList.toggle('expanded');
+            toggle.textContent = open ? 'Collapse' : 'Expand';
         }
 
-        // Lightbox for publication teasers
+        // A click on a publication's teaser shows the figure whole (or the film, larger).
+        const lightbox = document.getElementById('lightbox');
+        const bigImage = document.getElementById('lightbox-img');
+        const bigFilm = document.getElementById('lightbox-video');
         document.querySelectorAll('.publication .row-media').forEach(el => {
-            el.style.cursor = 'pointer';
             el.addEventListener('click', () => {
-                const bg = el.style.backgroundImage;
-                const url = bg.slice(bg.indexOf('url(') + 4, bg.lastIndexOf(')'));
-                const img = document.getElementById('lightbox-img');
-                img.src = url.replace(/['"]/g, '');
-                document.getElementById('lightbox').classList.add('active');
+                const film = el.tagName === 'VIDEO';
+                bigImage.hidden = film;
+                bigFilm.hidden = !film;
+                if (film) {
+                    bigFilm.src = el.currentSrc;
+                    bigFilm.play();
+                } else {
+                    const bg = el.style.backgroundImage;
+                    bigImage.src = bg.slice(bg.indexOf('url(') + 4, bg.lastIndexOf(')')).replace(/['"]/g, '');
+                }
+                lightbox.classList.add('active');
             });
         });
 
         function closeLightbox() {
-            document.getElementById('lightbox').classList.remove('active');
+            lightbox.classList.remove('active');
+            bigFilm.pause();
         }
 
         document.addEventListener('keydown', e => {
             if (e.key === 'Escape') closeLightbox();
         });
 
-        // Scroll-spy with sliding nav indicator
+        // The top bar marks the section being read.
         const sections = document.querySelectorAll('section[id]');
         const navLinks = document.querySelectorAll('.nav-link');
-        const navIndicator = document.getElementById('nav-indicator');
-        const navContent = document.querySelector('.nav-content');
-
-        function moveIndicator(link) {
-            const rect = link.getBoundingClientRect();
-            const navRect = navContent.getBoundingClientRect();
-            navIndicator.style.left = (rect.left - navRect.left) + 'px';
-            navIndicator.style.width = rect.width + 'px';
-        }
 
         function updateActiveNav() {
-            const scrollY = window.scrollY + 80;
+            const line = window.scrollY + window.innerHeight * 0.35;
             let currentId = '';
             sections.forEach(section => {
-                if (scrollY >= section.offsetTop) {
-                    currentId = section.getAttribute('id');
-                }
+                if (line >= section.offsetTop) currentId = section.id;
             });
-            let activeLink = null;
             navLinks.forEach(link => {
-                const isActive = link.getAttribute('href') === '#' + currentId;
-                link.classList.toggle('active', isActive);
-                if (isActive) activeLink = link;
+                if (link.getAttribute('href') === '#' + currentId) link.setAttribute('aria-current', 'true');
+                else link.removeAttribute('aria-current');
             });
-            if (activeLink) moveIndicator(activeLink);
         }
 
-        window.addEventListener('scroll', updateActiveNav);
+        window.addEventListener('scroll', updateActiveNav, { passive: true });
         window.addEventListener('resize', updateActiveNav);
         updateActiveNav();
 
-        // Back to top button
+        // Back to top button; and the name in the bar, which only shows once
+        // the name in the opening has scrolled away.
         const backToTop = document.getElementById('back-to-top');
-        window.addEventListener('scroll', () => {
+        const bar = document.querySelector('.nav');
+        const name = document.querySelector('.hero h1');
+        function updateBar() {
             backToTop.classList.toggle('visible', window.scrollY > 400);
-        });
+            bar.classList.toggle('past', name.getBoundingClientRect().bottom < 40);
+        }
+        window.addEventListener('scroll', updateBar, { passive: true });
+        updateBar();
         backToTop.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
-        // Scroll fade-in animation
-        const fadeEls = document.querySelectorAll('.publication, .experience-item, .about-block, .news-section, .section-card');
-        fadeEls.forEach((el, i) => {
-            el.classList.add('fade-in');
-            el.style.animationDelay = (i % 5) * 0.1 + 's';
-        });
-
-        const fadeObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    fadeObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1 });
-
-        fadeEls.forEach(el => fadeObserver.observe(el));
-
-        // Theme toggle: auto (follow system, default) -> light -> dark
-        // localStorage['theme'] holds 'light' or 'dark'; absent means auto.
-        const darkToggle = document.getElementById('dark-mode-toggle');
-        const systemDark = window.matchMedia('(prefers-color-scheme: dark)');
-        const THEME_ICONS = { auto: '\u25D1', light: '\u263C', dark: '\u263E' };
-
-        function themeMode() {
-            const t = localStorage.getItem('theme');
-            return t === 'light' || t === 'dark' ? t : 'auto';
+        // The row of lights under the opening.
+        const bulbs = document.querySelector('.bulb-row .bulbs');
+        const bulbCount = 44;
+        for (let i = 0; i <= bulbCount; i++) {
+            const bulb = document.createElement('i');
+            bulb.className = 'bulb';
+            bulb.style.left = (i / bulbCount * 100).toFixed(2) + '%';
+            bulb.style.setProperty('--i', i);
+            bulbs.appendChild(bulb);
         }
 
-        function applyTheme(mode) {
-            const isDark = mode === 'dark' || (mode === 'auto' && systemDark.matches);
-            document.body.classList.toggle('dark-mode', isDark);
-        }
-
-        function refreshToggle(mode) {
-            darkToggle.textContent = THEME_ICONS[mode];
-            const label = 'Theme: ' + (mode === 'auto' ? 'auto (follows system)' : mode);
-            darkToggle.title = label;
-            darkToggle.setAttribute('aria-label', label + '. Click to switch.');
-        }
-        refreshToggle(themeMode());
-
-        darkToggle.addEventListener('click', () => {
-            const order = ['auto', 'light', 'dark'];
-            const next = order[(order.indexOf(themeMode()) + 1) % order.length];
-            if (next === 'auto') {
-                localStorage.removeItem('theme');
-            } else {
-                localStorage.setItem('theme', next);
-            }
-            applyTheme(next);
-            refreshToggle(next);
-        });
-
-        systemDark.addEventListener('change', () => {
-            if (themeMode() === 'auto') applyTheme('auto');
-        });
-
-
-        // GitHub star counts
+        // GitHub star counts. The number written in the page shows first, and is
+        // all that shows when GitHub's API refuses to answer: it allows 60 requests
+        // an hour per network address, shared by everyone behind that address. A
+        // fresh count replaces it when one comes, and is kept for a day so that
+        // coming back to the page does not ask again.
+        const showStars = (el, n) => {
+            el.textContent = '\u2605 ' + (n >= 1000 ? (n / 1000).toFixed(1) + 'k' : n);
+        };
         document.querySelectorAll('.github-stars[data-repo]').forEach(el => {
-            const repo = el.dataset.repo;
-            fetch('https://api.github.com/repos/' + repo)
-                .then(r => r.json())
+            const key = 'stars:' + el.dataset.repo;
+            try {
+                const kept = JSON.parse(localStorage.getItem(key));
+                if (kept && Date.now() - kept.at < 24 * 60 * 60 * 1000) {
+                    showStars(el, kept.n);
+                    return;
+                }
+            } catch {}
+            fetch('https://api.github.com/repos/' + el.dataset.repo)
+                .then(r => (r.ok ? r.json() : null))
                 .then(data => {
-                    if (data.stargazers_count !== undefined) {
-                        const count = data.stargazers_count >= 1000
-                            ? (data.stargazers_count / 1000).toFixed(1) + 'k'
-                            : data.stargazers_count;
-                        el.innerHTML = '&#9733; ' + count;
-                    }
+                    if (!data || data.stargazers_count === undefined) return;
+                    showStars(el, data.stargazers_count);
+                    try {
+                        localStorage.setItem(key, JSON.stringify({ n: data.stargazers_count, at: Date.now() }));
+                    } catch {}
                 })
                 .catch(() => {});
         });
+
+        // Footer: this year, and the month the page was last changed (the date the
+        // server gives for the file, which on GitHub Pages is the last push).
+        document.getElementById('year').textContent = new Date().getFullYear();
+        const changed = new Date(document.lastModified);
+        if (!isNaN(changed)) {
+            document.getElementById('updated').textContent =
+                '\u00b7 Updated ' + changed.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+        }
     </script>
 </body>
 </html>
